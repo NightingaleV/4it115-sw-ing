@@ -1,0 +1,24 @@
+#BlueJ package file
+objectbench.height=30
+objectbench.width=1428
+package.editor.height=143
+package.editor.width=1336
+package.editor.x=5
+package.editor.y=763
+package.numDependencies=0
+package.numTargets=1
+package.showExtends=true
+package.showUses=true
+target1.editor.height=864
+target1.editor.width=1448
+target1.editor.x=226
+target1.editor.y=77
+target1.height=50
+target1.name=Start
+target1.naviview.expanded=true
+target1.showInterface=false
+target1.type=ClassTarget
+target1.typeParameters=
+target1.width=80
+target1.x=160
+target1.y=10
