@@ -39,7 +39,7 @@ public class PrikazPoloz implements IPrikaz
         Batoh batoh = plan.getBatoh();
         Vec vec = batoh.getVec(nazevVeci);
         if(vec == null){
-            return "Takový předmět se v inventáři nenechází, pro zobrazení inventáře napiš \"batoh\"";
+            return "Takový předmět v inventáři není, pro zobrazení inventáře napiš \"batoh\"";
         }
         else{
             plan.getBatoh().odeberVec(nazevVeci);
