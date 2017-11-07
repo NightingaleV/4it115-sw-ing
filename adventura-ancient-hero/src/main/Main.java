@@ -5,6 +5,7 @@
  */
 package main;
 
+import UI.Mapa;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -34,10 +35,12 @@ public class Main extends Application {
     private TextArea centralText;
     private IHra hra;
     private TextField zadejPrikazTextArea;
+    private Mapa mapa;
 
     @Override
     public void start(Stage primaryStage) {
         hra = new Hra();
+        mapa = new Mapa(hra);
         BorderPane borderPane = new BorderPane();
 
         // Text s prubehem hry
@@ -86,6 +89,7 @@ public class Main extends Application {
         dolniLista.getChildren().addAll(zadejPrikazLabel,zadejPrikazTextArea);
 
         borderPane.setLeft(obrazekFlowPane);
+        borderPane.setLeft(mapa);
         borderPane.setBottom(dolniLista);
         Scene scene = new Scene(borderPane, 750, 450);
         primaryStage.setTitle("Adventura");

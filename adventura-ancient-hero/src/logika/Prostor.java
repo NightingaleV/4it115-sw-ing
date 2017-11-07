@@ -30,6 +30,8 @@ public class Prostor {
     private Map<String, Vec> veci;
     private boolean zamcena = false;
     private Vec klic;
+    private double posX;
+    private double posY;
 
     /**
      * Vytvoření prostoru se zadaným popisem, např. "kuchyň", "hala", "trávník
@@ -39,9 +41,11 @@ public class Prostor {
      * víceslovný název bez mezer.
      * @param popis Popis prostoru.
      */
-    public Prostor(String nazev, String popis) {
+    public Prostor(String nazev, String popis, double posX, double posY) {
         this.nazev = nazev;
         this.popis = popis;
+        this.posX = posX;
+        this.posY = posY;
         vychody = new HashSet<>();
         veci = new HashMap<>();
         postavy = new HashSet <Postava> ();
@@ -285,5 +289,20 @@ public class Prostor {
     public Vec odeberVec(String nazev) {
         return veci.remove(nazev);
     }
-    
+
+    public double getPosX() {
+        return posX;
+    }
+
+    public void setPosX(double posX) {
+        this.posX = posX;
+    }
+
+    public double getPosY() {
+        return posY;
+    }
+
+    public void setPosY(double posY) {
+        this.posY = posY;
+    }
 }
