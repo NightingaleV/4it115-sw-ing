@@ -194,7 +194,7 @@ public class HerniPlan implements Subject{
      */
     public void setAktualniProstor(Prostor prostor) {
        aktualniProstor = prostor;
-       notifyObservers();
+       notifyAllObservers();
     }
     
     public boolean hracVyhral() {
@@ -215,12 +215,12 @@ public class HerniPlan implements Subject{
     }
 
     @Override
-    public void removeObserver(Observer observer) {
+    public void deleteObserver(Observer observer) {
         listObserveru.remove(observer);
     }
 
     @Override
-    public void notifyObservers() {
+    public void notifyAllObservers() {
         for (Observer listObserveruItem : listObserveru) {
             listObserveruItem.update();
         }

@@ -5,6 +5,7 @@
  */
 package main;
 
+
 import UI.Mapa;
 import UI.MenuPole;
 import javafx.application.Application;
@@ -15,17 +16,17 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import logika.Hra;
 import logika.IHra;
 import uiText.TextoveRozhrani;
-
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 
 /**
  *
@@ -38,12 +39,14 @@ public class Main extends Application {
     private TextField zadejPrikazTextArea;
     private Mapa mapa;
     private MenuPole menu;
+    private Stage primaryStage;
 
     @Override
     public void start(Stage primaryStage) {
+        this.primaryStage = primaryStage;
         hra = new Hra();
         mapa = new Mapa(hra);
-        menu = new MenuPole();
+        menu = new MenuPole(this);
         BorderPane borderPane = new BorderPane();
 
         // Text s prubehem hry
@@ -54,7 +57,7 @@ public class Main extends Application {
 
         //label s textem zadej prikaz
         Label zadejPrikazLabel = new Label("Zadej prikaz: ");
-        zadejPrikazLabel.setFont(Font.font("Arial", FontWeight.BOLD, 14));
+        zadejPrikazLabel.setFont(Font.font("Arial", FontWeight.BOLD, 16));
 
         // text area do ktere piseme prikazy
         zadejPrikazTextArea = new TextField("...");
@@ -122,6 +125,20 @@ public class Main extends Application {
                 System.exit(1);
             }
         }
+    }
+
+    public void novaHra() {
+        hra = new Hra();
+        centralText.setText(hra.vratUvitani());
+        //to same pro vsechny observery
+        mapa.novaHra(hra);
+    }
+
+    /**
+     * @return the primaryStage
+     */
+    public Stage getPrimaryStage() {
+        return primaryStage;
     }
 
 }

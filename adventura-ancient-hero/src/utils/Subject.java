@@ -8,8 +8,8 @@ public interface Subject {
 
     void registerObserver(Observer observer);
 
-    void removeObserver(Observer observer);
+    void deleteObserver (Observer observer);
 
-    void notifyObservers();
+    void notifyAllObservers();
 
 }
