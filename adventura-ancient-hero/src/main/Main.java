@@ -6,6 +6,7 @@
 package main;
 
 import UI.Mapa;
+import UI.MenuPole;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -36,11 +37,13 @@ public class Main extends Application {
     private IHra hra;
     private TextField zadejPrikazTextArea;
     private Mapa mapa;
+    private MenuPole menu;
 
     @Override
     public void start(Stage primaryStage) {
         hra = new Hra();
         mapa = new Mapa(hra);
+        menu = new MenuPole();
         BorderPane borderPane = new BorderPane();
 
         // Text s prubehem hry
@@ -90,6 +93,8 @@ public class Main extends Application {
 
         borderPane.setLeft(obrazekFlowPane);
         borderPane.setLeft(mapa);
+        //menu adventury
+        borderPane.setTop(menu);
         borderPane.setBottom(dolniLista);
         Scene scene = new Scene(borderPane, 750, 450);
         primaryStage.setTitle("Adventura");
