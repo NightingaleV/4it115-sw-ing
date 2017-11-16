@@ -8,12 +8,17 @@ package main;
 
 import UI.Mapa;
 import UI.MenuPole;
+import UI.ObrazkovyInventar;
+import UI.Vychody;
 import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -26,6 +31,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import logika.Hra;
 import logika.IHra;
+import logika.Prostor;
 import uiText.TextoveRozhrani;
 
 /**
@@ -40,6 +46,8 @@ public class Main extends Application {
     private Mapa mapa;
     private MenuPole menu;
     private Stage primaryStage;
+    private Vychody vychody;
+    private ObrazkovyInventar obsahBatohu;
 
     @Override
     public void start(Stage primaryStage) {
@@ -47,12 +55,15 @@ public class Main extends Application {
         hra = new Hra();
         mapa = new Mapa(hra);
         menu = new MenuPole(this);
+        vychody = new Vychody(hra);
+        obsahBatohu = new ObrazkovyInventar(hra);
         BorderPane borderPane = new BorderPane();
 
         // Text s prubehem hry
         centralText = new TextArea();
         centralText.setText(hra.vratUvitani());
         centralText.setEditable(false);
+        centralText.setFont(Font.font("Arial", 16));
         borderPane.setCenter(centralText);
 
         //label s textem zadej prikaz
@@ -60,7 +71,7 @@ public class Main extends Application {
         zadejPrikazLabel.setFont(Font.font("Arial", FontWeight.BOLD, 16));
 
         // text area do ktere piseme prikazy
-        zadejPrikazTextArea = new TextField("...");
+        zadejPrikazTextArea = new TextField("Zadej prikaz");
         zadejPrikazTextArea.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override
@@ -80,33 +91,47 @@ public class Main extends Application {
                 }
             }
         });
+        //obrazek s mapou a batohem
+        FlowPane levyPanel = new FlowPane();
+        levyPanel.setAlignment(Pos.TOP_LEFT);
+        levyPanel.getChildren().add(mapa);
+        levyPanel.getChildren().add(obsahBatohu);
+        borderPane.setLeft(levyPanel);
 
-        //obrzek s mapou
 
-        FlowPane obrazekFlowPane = new FlowPane();
-        obrazekFlowPane.setPrefSize(200, 200);
-        ImageView obrazekImageView = new ImageView(new Image(Main.class.getResourceAsStream("/zdroje/mapa.png"),400,200,true,true));
-        obrazekFlowPane.setAlignment(Pos.CENTER);
-        obrazekFlowPane.getChildren().add(obrazekImageView);
 
         //dolni lista s elementy
         FlowPane dolniLista = new FlowPane();
         dolniLista.setAlignment(Pos.CENTER);
         dolniLista.getChildren().addAll(zadejPrikazLabel,zadejPrikazTextArea);
 
-        borderPane.setLeft(obrazekFlowPane);
-        borderPane.setLeft(mapa);
+
         //menu adventury
         borderPane.setTop(menu);
         borderPane.setBottom(dolniLista);
-        Scene scene = new Scene(borderPane, 750, 450);
-        primaryStage.setTitle("Adventura");
+        Scene scene = new Scene(borderPane, 1260, 800);
+        primaryStage.setTitle("Adventura Ancient Hero");
 
         primaryStage.setScene(scene);
         primaryStage.show();
         zadejPrikazTextArea.requestFocus();
+
+        // seznam vychodu
+        borderPane.setRight(vychody);
     }
 
+    private ListView nastavVychody() {
+        ListView vychody = new ListView();
+        ObservableList<String> dataVychodu = FXCollections.observableArrayList();
+        vychody.setItems(dataVychodu);
+        vychody.setPrefWidth(100);
+
+        for (Prostor prostor : hra.getHerniPlan().getAktualniProstor().getVychody()) {
+            dataVychodu.add(prostor.getNazev());
+        }
+
+        return vychody;
+    }
     /**
      * @param args the command line arguments
      */

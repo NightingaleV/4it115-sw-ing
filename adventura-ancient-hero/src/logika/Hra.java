@@ -16,6 +16,7 @@ package logika;
 public class Hra implements IHra {
     private SeznamPrikazu platnePrikazy;    // obsahuje seznam přípustných příkazů
     private HerniPlan herniPlan;
+    private final Batoh batoh;
     private boolean konecHry = false;
 
     /**
@@ -24,6 +25,7 @@ public class Hra implements IHra {
     public Hra() {
         herniPlan = new HerniPlan();
         platnePrikazy = new SeznamPrikazu();
+        batoh = new Batoh();
         platnePrikazy.vlozPrikaz(new PrikazNapoveda(platnePrikazy));
         platnePrikazy.vlozPrikaz(new PrikazJdi(herniPlan));
         platnePrikazy.vlozPrikaz(new PrikazKonec(this));
@@ -42,11 +44,10 @@ public class Hra implements IHra {
      */
     public String vratUvitani() {
         return "Vítejte ve hře Ancient Hero!\n" +
-               "\nPOKYNY: Hra je optimalizovaná na 960 px na šířku, pro přizpůsobení zvětšete okno.\n"+
                "Napište 'napoveda', pro dostupné příkazy.\n"+
                "\nToto je příběh udatného řeckého válečníka, který bojoval v Peloponéské válce se svým bratrem.\n" +
-               "V jedné z bitev tě bratr zachránil před smrtí tím, že vběhl do střely lučišníkovi, který ho měl na mušce.\n"+
-               "Chce mu to oplatit a tak se vydává zachránit bratra."+
+               "V jedné z bitev ho bratr zachránil před smrtí tím, že vběhl do střely lučišníkovi, který ho měl na mušce.\n"+
+               "Chce mu tento čin oplatit a tak se vydává zachránit bratra."+
                "\n" +
                herniPlan.getAktualniProstor().dlouhyPopis();
     }
@@ -115,5 +116,9 @@ public class Hra implements IHra {
      public HerniPlan getHerniPlan(){
         return herniPlan;
      }
+
+    public Batoh getBatoh() {
+        return this.batoh;
+    }
     
 }

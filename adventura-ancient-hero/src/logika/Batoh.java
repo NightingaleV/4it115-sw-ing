@@ -1,5 +1,7 @@
 package logika;
 import java.util.*;
+import utils.Subject;
+import utils.Observer;
 
 
 /**
@@ -8,12 +10,13 @@ import java.util.*;
  * @author Vitezslav Slavik
  * @version prosinec 2016
  */
-public class Batoh
+public class Batoh implements Subject
 {
     // atributy inventare a jeho omezeni
     public Map<String, Vec> seznamVeci;
     private static final int velikost_inventare = 10;
     public HerniPlan plan;
+    private final List<Observer> listObserveru = new ArrayList<>();
 
     /**
      * Konstruktor tridy
@@ -90,5 +93,41 @@ public class Batoh
      */
     public boolean jeMisto(){
         return (seznamVeci.size() <= velikost_inventare);
+    }
+
+    public Collection<String> getObsahBatohu() {
+
+        return Collections.unmodifiableCollection(seznamVeci.keySet());
+
+    }
+
+    /**
+     * Přidáni listu k observeru
+     *
+     * @param observer observer
+     */
+    @Override
+    public void registerObserver(Observer observer) {
+        listObserveru.add(observer);
+    }
+
+    /**
+     * Odstranění liztu z observeru
+     *
+     * @param observer observer
+     */
+    @Override
+    public void deleteObserver(Observer observer) {
+        listObserveru.remove(observer);
+    }
+
+    /**
+     * Vyvolání aktualizace observeru
+     */
+    @Override
+    public void notifyAllObservers() {
+        for (Observer observer : listObserveru) {
+            observer.update();
+        }
     }
 }
