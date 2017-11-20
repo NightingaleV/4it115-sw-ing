@@ -41,6 +41,7 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
+import logika.HerniPlan;
 import logika.Hra;
 import logika.IHra;
 import logika.Prostor;
@@ -60,6 +61,7 @@ public class Main extends Application {
     private Stage primaryStage;
     private Vychody vychody;
     private ObsahBatohu obsahBatohu;
+    public HerniPlan herniPlan;
 
     @Override
     public void start(Stage primaryStage) {
