@@ -8,7 +8,7 @@ package main;
 
 import UI.Mapa;
 import UI.MenuPole;
-import UI.ObrazkovyInventar;
+import UI.ObsahBatohu;
 import UI.Vychody;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -17,17 +17,29 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCombination;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Paint;
+import javafx.scene.shape.Circle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
+import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 import logika.Hra;
 import logika.IHra;
@@ -47,7 +59,7 @@ public class Main extends Application {
     private MenuPole menu;
     private Stage primaryStage;
     private Vychody vychody;
-    private ObrazkovyInventar obsahBatohu;
+    private ObsahBatohu obsahBatohu;
 
     @Override
     public void start(Stage primaryStage) {
@@ -56,7 +68,7 @@ public class Main extends Application {
         mapa = new Mapa(hra);
         menu = new MenuPole(this);
         vychody = new Vychody(hra);
-        obsahBatohu = new ObrazkovyInventar(hra);
+        obsahBatohu = new ObsahBatohu(hra);
         BorderPane borderPane = new BorderPane();
 
         // Text s prubehem hry
@@ -96,6 +108,7 @@ public class Main extends Application {
         levyPanel.setAlignment(Pos.TOP_LEFT);
         levyPanel.getChildren().add(mapa);
         levyPanel.getChildren().add(obsahBatohu);
+
         borderPane.setLeft(levyPanel);
 
 

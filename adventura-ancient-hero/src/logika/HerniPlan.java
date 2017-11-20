@@ -23,7 +23,7 @@ public class HerniPlan implements Subject{
     private Prostor aktualniProstor;
     private Batoh batoh;
 
-    private List<Observer> listObserveru = new ArrayList<Observer>();
+    private List<Observer> listObserveru = new ArrayList<>();
     // private Batoh batoh;
 
     /**
@@ -101,7 +101,7 @@ public class HerniPlan implements Subject{
         Vec pivo = new Vec("pivo", "Pivo s pořádnou pěnou, ale žádnej podmírák.", true);
         Vec medovnik = new Vec ("medovník","Medový koláč", true);
         Vec zlata_mince = new Vec("stater", "Zlatá mince", true);
-        Vec stribrna_mince = new Vec("obolos", "Stribrna mince", true);
+        Vec obolos = new Vec("obolos", "Stribrna mince", true);
         Vec bronzova_zbroj = new Vec("bronzová_zbroj", "Klasická zbroj, kterou byl vybaven každý hoplita. Teda pokud nebyl zrovna nahý.", true);
         Vec mec = new Vec("meč", "Klasický xifos. Meč kterým byl vybavený každý hoplita.", true);
         Vec stit = new Vec("štít", "Štít, kterým by měl být vybavený každý hoplita.", true);
@@ -127,7 +127,7 @@ public class HerniPlan implements Subject{
         // umístíme věci do prostorů
         taverna.vlozVec(zlata_mince);
         taverna.vlozVec(medovnik);
-        taverna.vlozVec(stribrna_mince);
+        taverna.vlozVec(obolos);
         taverna.vlozVec(stul);
         
         zbrojnice.vlozVec(bronzova_zbroj);
@@ -153,7 +153,7 @@ public class HerniPlan implements Subject{
         podsveti.setPostava(new Postava("Kerberos","Neumí mluvit, jen vrčet a štěkat...","Vrčí na tebe a nevypadá, že by tohle chtěl.", "Dal jsi Kerberovi medový koláč. Příběhy o Aeneasovi a dalších nelhaly. Hlavy se začínají hádat a prát, která bude jíst. \n"
                                                     +"Vítězí ta prostřední a vychutnává si koláč.",
                                         "Všiml sis, že jedna hlava si v souboji o koláč vyrazila zub, který leží na zemi. Zub sbíráš do batohu, jen tak pro štěstí.",medovnik,zub_03));
-        reka_styx.setPostava(new Postava("Cháron","Ha živý. Takové tu dole moc nevídám. Pro tebe platí stejná pravidla, dej mi minci a převezu tě dál.","Hele chci stříbrnej obolos, jinný uplatky neberu.", "Ha máš minci?","No konečně, tak můžem vyrazit",stribrna_mince,vstupenka));
+        reka_styx.setPostava(new Postava("Cháron","Ha živý. Takové tu dole moc nevídám. Pro tebe platí stejná pravidla, dej mi minci a převezu tě dál.","Hele chci stříbrnej obolos, jinný uplatky neberu.", "Ha máš minci?","No konečně, tak můžem vyrazit",obolos,vstupenka));
         chodba_neklidu.setPostava(new Postava("Bratr","Tak se zase setkáváme. Ty ale nejsi mrtvý, znamená to, že jsi se pro mě vrátil?\n"
                                                       +"TY: Jdu za vládcem podsvětí vyjednávat o tvém propuštění. Tvůj život byl příliš krátký a vzat neprávem. Já bych měl být na tvém místě, \nzachránil jsi mi přece život.","Chci se vrátit s tebou na svět.", "","",vec01,vec02));
         sal_zatracenych.setPostava(new Postava("Hádés","Vzkutku troufalé, aby živý přišel mezi mrtvé. Mladická nerozvážnost...\n"
@@ -201,10 +201,10 @@ public class HerniPlan implements Subject{
         if (getBatoh().obsahujeVec("win")) {
             return true;
         }
-        
+
         return false;
     }
-    
+
     public Batoh getBatoh(){
         return this.batoh;
     }

@@ -13,7 +13,7 @@ import utils.Observer;
 public class Batoh implements Subject
 {
     // atributy inventare a jeho omezeni
-    public Map<String, Vec> seznamVeci;
+    public final Map<String, Vec> seznamVeci;
     private static final int velikost_inventare = 10;
     public HerniPlan plan;
     private final List<Observer> listObserveru = new ArrayList<>();
@@ -22,7 +22,7 @@ public class Batoh implements Subject
      * Konstruktor tridy
      */
     public Batoh(){
-        seznamVeci = new HashMap<String, Vec>();
+        seznamVeci = new HashMap<>();
     }
     
     /**
@@ -47,6 +47,7 @@ public class Batoh implements Subject
     {
         if(jeMisto()){
             seznamVeci.put(predmet.getNazev(),predmet);
+            notifyAllObservers();
             return true;
         }
         else{
@@ -63,6 +64,7 @@ public class Batoh implements Subject
     {
         if (seznamVeci.containsKey(predmet)){
             seznamVeci.remove(predmet);
+            notifyAllObservers();
             return true;
         }
         else{
@@ -77,12 +79,11 @@ public class Batoh implements Subject
      * @return true pokud je v batohu
      */
     public boolean obsahujeVec (String nazev) {
-        return (seznamVeci.containsKey(nazev));
+        return this.seznamVeci.containsKey(nazev);
     }
 
     /**
     *  Metodou ziskame predmet
-    *  @param  predmet  parametr je vec kterou chceme
     */   
     public Vec getVec(String nazevVeci) {
         return seznamVeci.get(nazevVeci);

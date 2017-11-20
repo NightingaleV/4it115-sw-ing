@@ -16,7 +16,7 @@ package logika;
 public class Hra implements IHra {
     private SeznamPrikazu platnePrikazy;    // obsahuje seznam přípustných příkazů
     private HerniPlan herniPlan;
-    private final Batoh batoh;
+    private Batoh batoh;
     private boolean konecHry = false;
 
     /**

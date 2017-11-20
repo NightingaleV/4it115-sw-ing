@@ -18,7 +18,7 @@ import main.Main;
  * @author     Marek Bernard
  * @version LS 2017
  */
-public class ObrazkovyInventar extends AnchorPane implements Observer {
+public class ObsahBatohu extends AnchorPane implements Observer {
 
     public IHra hra;
 
@@ -27,7 +27,7 @@ public class ObrazkovyInventar extends AnchorPane implements Observer {
      *
      * @param hra aktualní hra
      */
-    public ObrazkovyInventar(IHra hra) {
+    public ObsahBatohu(IHra hra) {
         this.hra = hra;
         hra.getBatoh().registerObserver(this);
         //init();
@@ -75,6 +75,6 @@ public class ObrazkovyInventar extends AnchorPane implements Observer {
      * Slouží pro nastavení šířky
      */
     private void init() {
-        this.setPrefWidth(200);
+        this.setPrefWidth(150);
     }
 }

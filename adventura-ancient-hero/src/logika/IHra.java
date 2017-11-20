@@ -53,8 +53,10 @@ public interface IHra
      */
      public HerniPlan getHerniPlan();
 
-    public Batoh getBatoh();
+
     
     //== ZDĚDĚNÉ METODY ========================================================
     //== INTERNÍ DATOVÉ TYPY ===================================================
+
+    public Batoh getBatoh();
 }
