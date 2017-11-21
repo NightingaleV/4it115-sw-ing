@@ -12,6 +12,7 @@ public class PrikazMluv implements IPrikaz
     //== Datové atributy (statické i instancí)======================================
     private static final String NAZEV = "mluv";
     private HerniPlan plan;
+    public IHra hra;
 
     /**
      * Constructor for objects of class PrikazMluv
@@ -31,13 +32,9 @@ public class PrikazMluv implements IPrikaz
         Prostor aktualniProstor = plan.getAktualniProstor();
         String jmenoPostavy = parametry[0];
         Postava postava = aktualniProstor.vyberPostava(jmenoPostavy);
-        Vec kopi = new Vec("kopí", "Kopí je tvoje prodloužená ruka, lze i hodit.", true);
+
         if (postava==null){
             return "Tato postava v této místnosti není.";}
-        if (postava.getJmeno().equals("Kentaur")) {
-            plan.getBatoh().pridejVec(kopi);
-            return postava.toString();
-        }
         else {    
             return postava.toString();
         }

@@ -13,6 +13,7 @@ public class PrikazBojuj implements IPrikaz
     private static final String NAZEV = "bojuj";
     private HerniPlan plan;
     private String sebevrazda = "Správný válečník pozná, kdy je útok sebevražedný, a tento teda je. Sežeň si lepší vybavení.";
+    public IHra hra;
     
 
     /**
@@ -38,57 +39,76 @@ public class PrikazBojuj implements IPrikaz
         Prostor aktualniProstor = plan.getAktualniProstor();
         String jmenoPostavy = parametry[0];
         Postava postava = aktualniProstor.vyberPostava(jmenoPostavy);
-        Vec stit = new Vec("štít", "Štít, kterým by měl být vybavený každý hoplita.", true);
-        Vec zub_01 = new Vec("zub_Hydry", "Zub vytržený z těla Hydry", true);
-        Vec zub_02 = new Vec("zub_Chiméry", "Zub vytržený z těla Chiméry", true);
+        Vec stit = new Vec("stit", "Štít, kterým by měl být vybavený každý hoplita.", true);
+        Vec zub_01 = new Vec("zub_hydry", "Zub vytržený z těla Hydry", true);
+        Vec zub_02 = new Vec("zub_chimery", "Zub vytržený z těla Chiméry", true);
         Vec win = new Vec("win", "", true);
+
+
+        if (postava == null)
+        {
+            return "Tato postava v této místnosti není.";
+        }
+        else if(postava.getJmeno().equals("harpyje") && plan.getBatoh().obsahujeVec("kopi"))
+        {
+            plan.getAktualniProstor().vlozVec(stit);
+            plan.getAktualniProstor().vymazPostavu("harpyje");
+            return "BOJ: Chvíli je pozoruješ sám schován za kamenem. Všechny za doprovodu krouží nad hnízdem a po chvilce odlétají. Ovšem jedna z nich \n"
+                    +"se však vrací a hlídá hnízdo. Neváháš a plný soustředění házíš kopí. Oštěp sviští vzduchem silou blesku. Projel skrze záda a zarazil se\n"
+                    +"hluboko do země. Harpyje křičí a mává křídly, je ovšem přibitá k zemi. Bereš svůj meč a dílo dokonáváš. V hnízdě si našel vedle kostí\n"
+                    +"také hoplitský štít.\n";
+        }
+        else if(postava.getJmeno().equals("chimera") && hra.getBatoh().obsahujeVec("stit") && plan.getBatoh().obsahujeVec("mec"))
+        {
+            plan.getAktualniProstor().vlozVec(zub_02);
+            plan.getAktualniProstor().vymazPostavu("Chiméra");
+            return "BOJ: Chiméra vyráží jako první. Plnou rychlostí jde proti tobě. V poslední chvíli sis připravil svůj štít a útok odrazil. Chiméra je v\n"
+                    +"okamžiku ochromená nárazem. Ohnal se po tobě dračí ocas, ale hbitě si táhnul svým mečem a s precizností si ho odsekl od zbytku těla.\n"
+                    +"Monstrum se vzpamatovalo a začalo ustupovat. S respektem v očích se krok po kroku vzdalovalo až zaběhlo zpět do jeskyně. Z ještě se\n"
+                    +"mrskajícího dračího ocasu vytrháváš zub pro štěstí.\n";
+        }
+
+
+
 
         if (postava == null) {
             return "Tato postava v této místnosti není.";
         }
         else {
-            if (postava.getJmeno().equals("Harpyje")) {
-                if (plan.getBatoh().obsahujeVec("kopí") && plan.getBatoh().obsahujeVec("meč") && plan.getBatoh().obsahujeVec("bronzová_zbroj")) {
+            if ()) {
+                if () {
                     if(plan.getBatoh().jeMisto()){
                         plan.getBatoh().pridejVec(stit);
                     }
                     else {
-                        plan.getAktualniProstor().vlozVec(stit);
+
                     }
-                    plan.getAktualniProstor().vymazPostavu("Harpyje");
-                    return "BOJ: Chvíli je pozoruješ sám schován za kamenem. Všechny za doprovodu krouží nad hnízdem a po chvilce odlétají. Ovšem jedna z nich \n"
-                    +"se však vrací a hlídá hnízdo. Neváháš a plný soustředění házíš kopí. Oštěp sviští vzduchem silou blesku. Projel skrze záda a zarazil se\n"
-                    +"hluboko do země. Harpyje křičí a mává křídly, je ovšem přibitá k zemi. Bereš svůj meč a dílo dokonáváš. V hnízdě si našel vedle kostí\n"
-                    +"také hoplitský štít.\n"; 
+
                 }
                 else {
                     return sebevrazda;
                     }
                 }
                 
-            if (postava.getJmeno().equals("Chiméra")) {
-                if (plan.getBatoh().obsahujeVec("štít")) {
-                    if(plan.getBatoh().jeMisto()){
-                        plan.getBatoh().pridejVec(zub_02);
+            if (postava.getJmeno().equals("chimera")) {
+                if (hra.getBatoh().obsahujeVec("stit") && plan.getBatoh().obsahujeVec("mec") && plan.getBatoh().obsahujeVec("bronzova_zbroj")) {
+                    if(hra.getBatoh().jeMisto()){
+                        hra.getBatoh().pridejVec(zub_02);
                     }
                     else {
                         plan.getAktualniProstor().vlozVec(zub_02);
                     }
-                    plan.getAktualniProstor().vymazPostavu("Chiméra");
-                    return "BOJ: Chiméra vyráží jako první. Plnou rychlostí jde proti tobě. V poslední chvíli sis připravil svůj štít a útok odrazil. Chiméra je v\n"
-                    +"okamžiku ochromená nárazem. Ohnal se po tobě dračí ocas, ale hbitě si táhnul svým mečem a s precizností si ho odsekl od zbytku těla.\n"
-                    +"Monstrum se vzpamatovalo a začalo ustupovat. S respektem v očích se krok po kroku vzdalovalo až zaběhlo zpět do jeskyně. Z ještě se\n"
-                    +"mrskajícího dračího ocasu vytrháváš zub pro štěstí.\n"; 
+
                 }
                 else {
                     return sebevrazda;
                     }
                 }  
             
-            if (postava.getJmeno().equals("Hydra")) {
-                if (plan.getBatoh().obsahujeVec("prsten_moci")) {
-                    if(plan.getBatoh().jeMisto()){
-                        plan.getBatoh().pridejVec(zub_01);
+            if (postava.getJmeno().equals("hydra")) {
+                if (hra.getBatoh().obsahujeVec("prsten_moci")) {
+                    if(hra.getBatoh().jeMisto()){
+                        hra.getBatoh().pridejVec(zub_01);
                     }
                     else {
                         plan.getAktualniProstor().vlozVec(zub_01);
@@ -111,10 +131,10 @@ public class PrikazBojuj implements IPrikaz
                     }
                 }
                 
-            if (postava.getJmeno().equals("Hádés")) {
-                if (plan.getBatoh().obsahujeVec("zub_Hydry")) {
-                    if(plan.getBatoh().jeMisto()){
-                        plan.getBatoh().pridejVec(win);
+            if (postava.getJmeno().equals("hades")) {
+                if (hra.getBatoh().obsahujeVec("zub_hydry")) {
+                    if(hra.getBatoh().jeMisto()){
+                        hra.getBatoh().pridejVec(win);
                     }
                     else {
                         plan.getAktualniProstor().vlozVec(win);
