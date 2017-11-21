@@ -61,7 +61,7 @@ public class PrikazBojuj implements IPrikaz
         else if(postava.getJmeno().equals("chimera") && hra.getBatoh().obsahujeVec("stit") && plan.getBatoh().obsahujeVec("mec") && plan.getBatoh().obsahujeVec("bronzova_zbroj"))
         {
             plan.getAktualniProstor().vlozVec(zub_02);
-            plan.getAktualniProstor().vymazPostavu("Chiméra");
+            plan.getAktualniProstor().vymazPostavu("chimera");
             return "BOJ: Chiméra vyráží jako první. Plnou rychlostí jde proti tobě. V poslední chvíli sis připravil svůj štít a útok odrazil. Chiméra je v\n"
                     +"okamžiku ochromená nárazem. Ohnal se po tobě dračí ocas, ale hbitě si táhnul svým mečem a s precizností si ho odsekl od zbytku těla.\n"
                     +"Monstrum se vzpamatovalo a začalo ustupovat. S respektem v očích se krok po kroku vzdalovalo až zaběhlo zpět do jeskyně. Z ještě se\n"
@@ -70,7 +70,7 @@ public class PrikazBojuj implements IPrikaz
         else if(postava.getJmeno().equals("hydra") && hra.getBatoh().obsahujeVec("prsten_moci"))
         {
             plan.getAktualniProstor().vlozVec(zub_01);
-            plan.getAktualniProstor().vymazPostavu("Hydra");
+            plan.getAktualniProstor().vymazPostavu("hydra");
             return "BOJ: Hlavou ti běží pochybné myšlenky. Máš zabít nesmrtelné. Přemýšlíš, jestli celá tahle výprava byl dobrý nápad nebo\n"
                     +"bláznivý nápad čestného muže. Nasadil sis prsten, strach a pochybnosti opadly, cítíš, že svedeš i nemožné. V s kopím v ruce\n"
                     +"pravé, se štítem v té levé se vrháš do chrámu vstříc monstru. Hydra odpočívá u oltáře. Drnčení tvé zbroje jí probudilo.\n"
@@ -91,9 +91,9 @@ public class PrikazBojuj implements IPrikaz
                     +"Persefona: Dokázal si to, zbavil jsi mě jeho okovů. Podsvětí ovšem musí mít svého vládce, nyní musíš zaujmout jeho místo.\n"
                     +"Ráda budu ženou udatného muže jako jsi ty.\n"
                     +"STÁVÁŠ SE BOHEM A VLÁDCEM PODSVĚTÍ\n"
-                    +"Ve tvém sídle se koná svatba, na kterou se schází božská smetánka. Loučíš se svým bratrem. Dojemná chvíle nechala v sále\n"
-                    +"zatracených ticho. Jednou se zase uvidíme bratře.\n"
-                    +"Hádes od té doby svůj čas tráví v chodbě neklidu, kde se hádá s ostatními, kdo by má větší právo dostat svůj život zpět. ";
+                    +"Ve tvém sídle se koná svatba, na kterou se schází božská smetánka. Loučíš se svým bratrem. Dojemná chvíle zanechala v sále\n"
+                    +"zatracených ticho. Jednou se zase uvidíme, bratře.\n"
+                    +"Hádes od té doby svůj čas tráví v chodbě neklidu, kde se hádá s ostatními, kdo by má větší právo, dostat svůj život zpět. ";
         }
         else if(
                 postava.getJmeno().equals("hostinsky") && postava.getJmeno().equals("starec") && postava.getJmeno().equals("stamgast")

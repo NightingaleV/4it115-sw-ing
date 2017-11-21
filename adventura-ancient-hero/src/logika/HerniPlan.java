@@ -50,7 +50,7 @@ public class HerniPlan implements Subject{
                                                  +"kněžího a zaujatě si čte texty na pergamenu. Na parapetu u okna nechává dívčina vychladnout medový koláč.\n", 363,340);
         Prostor zbrojnice = new Prostor("zbrojnice", "Přišel si do zbrojnice. Je naplněná vybavením pro hoplitskou jednotku.\n", 115, 340);
         Prostor lernovske_baziny = new Prostor("lernovske_baziny", "Vešel jsi do bažin. Všude mlha, sotva se držíš stezky, kterou ušlapala kopyta koní. Cítíš na zádech, že tě někdo pozoruje z povzdálí. \nPro jistotu máš "
-                                                     +"svůj meč připravený v ruce. U pradávného stromu na rozcestí stojí podivná bytost. Napůl muž napůl kůň.\n", 115, 85);
+                                                     +"svůj meč připravený v ruce. U pradávného stromu na rozcestí stojí podivná bytost. Napůl muž napůl kůň.\n", 363, 277);
         Prostor hora_ida = new Prostor ("hora_ida", "Vyšplhal jsi na vrcholek.  Před tebou se otevírá pustina, místo kde nic pozemského \n"
                                                     +"už nežije ani neroste. Všude jen skály a kameny. Kousek opodál vidíš nějaké hnízdo. Kolem je \n" 
                                                     +"několik harpyjí. Napůl žena, napůl pták. V hejnu můžou být tvrdým oříškem i pro zkušeného válečníka. \n", 363, 210);
@@ -177,7 +177,7 @@ public class HerniPlan implements Subject{
                                                          ,"Chci smrt mého manžela, nic jinného si nepřeji.", "", "",vec01,vec02));
         chram_mrtvych.setPostava(new Postava("hydra","Neumí mluvit...",nicnechce, "","",vec01,vec02));
 
-        aktualniProstor = lernovske_baziny;  // hra začíná v taverně
+        aktualniProstor = taverna;  // hra začíná v taverně
     }
     
     /**
