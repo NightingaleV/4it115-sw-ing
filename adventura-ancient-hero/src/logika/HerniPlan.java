@@ -47,28 +47,28 @@ public class HerniPlan implements Subject{
         Prostor taverna = new Prostor("taverna","Na první pohled obyčejná menší taverna. Na baru přiopitý štamgast vypráví své strasti života hostinskému, který však \n"
                                                  +"věnuje svou pozornost usměvavé dívce z kuchyně. U blízkého stolu parta sedláků hraje karty,  pochytil si pár slov z rozhovoru a\n"
                                                  +"hádají se, číže kráva nadojí nejvíc. U schodů do patra se válí nějaký mince. V rohu sedí uplně sám starý muž v oděvu\n"
-                                                 +"kněžího a zaujatě si čte texty na pergamenu. Na parapetu u okna nechává dívčina vychladnout medový koláč.\n", 110,40);
-        Prostor zbrojnice = new Prostor("zbrojnice", "Přišel si do zbrojnice. Je naplněná vybavením pro hoplitskou jednotku.\n", 115, 45);
+                                                 +"kněžího a zaujatě si čte texty na pergamenu. Na parapetu u okna nechává dívčina vychladnout medový koláč.\n", 363,340);
+        Prostor zbrojnice = new Prostor("zbrojnice", "Přišel si do zbrojnice. Je naplněná vybavením pro hoplitskou jednotku.\n", 115, 340);
         Prostor lernovske_baziny = new Prostor("lernovske_baziny", "Vešel jsi do bažin. Všude mlha, sotva se držíš stezky, kterou ušlapala kopyta koní. Cítíš na zádech, že tě někdo pozoruje z povzdálí. \nPro jistotu máš "
-                                                     +"svůj meč připravený v ruce. U pradávného stromu na rozcestí stojí podivná bytost. Napůl muž napůl kůň.\n", 120, 50);
+                                                     +"svůj meč připravený v ruce. U pradávného stromu na rozcestí stojí podivná bytost. Napůl muž napůl kůň.\n", 115, 85);
         Prostor hora_ida = new Prostor ("hora_ida", "Vyšplhal jsi na vrcholek.  Před tebou se otevírá pustina, místo kde nic pozemského \n"
                                                     +"už nežije ani neroste. Všude jen skály a kameny. Kousek opodál vidíš nějaké hnízdo. Kolem je \n" 
-                                                    +"několik harpyjí. Napůl žena, napůl pták. V hejnu můžou být tvrdým oříškem i pro zkušeného válečníka. \n", 125, 55);
+                                                    +"několik harpyjí. Napůl žena, napůl pták. V hejnu můžou být tvrdým oříškem i pro zkušeného válečníka. \n", 363, 210);
         Prostor rokle_kragu = new Prostor ("rokle_kragu", "Jdeš po této pustině a cítíš, že podsvětí je blízko. Rozhlédneš se, kolem tebe \n"
                                                           +"jsou všude kosti, hotové pohřebiště zvířecí i lidské. Slyšíš řev lva. Z jeskyně před tebou vyšla \n"
                                                           +"chiméra. Upřeně se na tebe dívá. Naskakuje ti husí kůže. Tohle monstrum má zpředu podobu \n"
-                                                          +"lva zadní část divoké kozy ocas draka, přímo jak z nejhorší noční můry. \n", 130, 56);
+                                                          +"lva zadní část divoké kozy ocas draka, přímo jak z nejhorší noční můry. \n", 363, 147);
         Prostor podsveti = new Prostor ("podsveti", "Jsi konečně zde. Vchod hlídá tříhlavý pes Kerberos. Toto obří stvoření má dech jako hnijící mrtvola a vypadá hladově.\n"
-                                                     +"Třeba má chuť na koláč", 140, 58);
+                                                     +"Třeba má chuť na koláč", 363, 85);
         Prostor reka_styx = new Prostor ("reka_styx", "U řeky se seskupují zástupy duší a čekají na převozníka. Po chvilce připlouvá loď.\n"
-                                                      +"Vystupuje z ní zamračený pohublý stařec a bere od duší mince.\n", 140, 60);
-        Prostor chodba_neklidu = new Prostor ("chodba_neklidu", "Chodba neklidných duší, které si zoufají nad svou smrtí. Hádají se zde, kdo\n"
-                                                            +"má větší právo se vrátit na pozemský svět. Opodál v rohu sedí tvůj mrtvý bratr.\n", 145, 58);
+                                                      +"Vystupuje z ní zamračený pohublý stařec a bere od duší mince.\n", 363, 25);
+        Prostor cesta_smrti = new Prostor ("cesta_smrti", "Chodba smrti, které duše zoufají nad svou smrtí. Hádají se zde, kdo\n"
+                                                            +"má větší právo se vrátit na pozemský svět. Opodál v rohu sedí tvůj mrtvý bratr.\n", 115, 25);
         Prostor sal_zatracenych = new Prostor ("sal_zatracenych", "Sál zatracených: Velkolepý sál samotného vládce podsvětí. U hodovního stolu sedí\n"
                                                                   +"nejstatečnější válečníci, které dostihla smrt v právě probíhající Peloponéské válce. Hádés\n"
                                                                   +"sedí na svém železném trůně a je potěšen z příjemné společnosti. Opodál sedí sama královna\n"
-                                                                  +"podsvětí Persefona. Nádherná dívka, ze které však srší na pohled smutek a žal.\n", 150, 65);
-        Prostor chram_mrtvych = new Prostor ("chram_mrtvych", "Chrám zpustošený řáděním monstra. Již z dálky slyšíš dračí řev.",155, 58);
+                                                                  +"podsvětí Persefona. Nádherná dívka, ze které však srší na pohled smutek a žal.\n", 115, 85);
+        Prostor chram_mrtvych = new Prostor ("chram_mrtvych", "Chrám zpustošený řáděním monstra. Již z dálky slyšíš dračí řev.",115, 277);
         
 
         // přiřazují se průchody mezi prostory (sousedící prostory)
@@ -88,11 +88,11 @@ public class HerniPlan implements Subject{
         podsveti.setVychod(rokle_kragu);
         podsveti.setVychod(reka_styx);
         reka_styx.setVychod(podsveti);
-        reka_styx.setVychod(chodba_neklidu);
-        chodba_neklidu.setVychod(reka_styx);
-        chodba_neklidu.setVychod(sal_zatracenych);
+        reka_styx.setVychod(cesta_smrti);
+        cesta_smrti.setVychod(reka_styx);
+        cesta_smrti.setVychod(sal_zatracenych);
         sal_zatracenych.setVychod(lernovske_baziny);
-        sal_zatracenych.setVychod(chodba_neklidu);
+        sal_zatracenych.setVychod(cesta_smrti);
         
         
         
@@ -123,8 +123,8 @@ public class HerniPlan implements Subject{
         podsveti.setKlic(zub_02);
         reka_styx.setZamcena(true);
         reka_styx.setKlic(zub_03);
-        chodba_neklidu.setZamcena(true);
-        chodba_neklidu.setKlic(vstupenka);
+        cesta_smrti.setZamcena(true);
+        cesta_smrti.setKlic(vstupenka);
 
         // umístíme věci do prostorů
         taverna.vlozVec(zlata_mince);
@@ -157,7 +157,7 @@ public class HerniPlan implements Subject{
                                                     +"Vítězí ta prostřední a vychutnává si koláč.",
                                         "Všiml sis, že jedna hlava si v souboji o koláč vyrazila zub, který leží na zemi. Zub sbíráš do batohu, jen tak pro štěstí.",medovnik,zub_03));
         reka_styx.setPostava(new Postava("charon","Ha živý. Takové tu dole moc nevídám. Pro tebe platí stejná pravidla, dej mi minci a převezu tě dál.","Hele chci stříbrnej obolos, jinný uplatky neberu.", "Ha máš minci?","No konečně, tak můžem vyrazit",obolos,vstupenka));
-        chodba_neklidu.setPostava(new Postava("bratr","Tak se zase setkáváme. Ty ale nejsi mrtvý, znamená to, že jsi se pro mě vrátil?\n"
+        cesta_smrti.setPostava(new Postava("bratr","Tak se zase setkáváme. Ty ale nejsi mrtvý, znamená to, že jsi se pro mě vrátil?\n"
                                                       +"TY: Jdu za vládcem podsvětí vyjednávat o tvém propuštění. Tvůj život byl příliš krátký a vzat neprávem. Já bych měl být na tvém místě, \nzachránil jsi mi přece život.","Chci se vrátit s tebou na svět.", "","",vec01,vec02));
         sal_zatracenych.setPostava(new Postava("hades","Vzkutku troufalé, aby živý přišel mezi mrtvé. Mladická nerozvážnost...\n"
                                                       +"TY: Přišel jsem pro svého bratra! Je zde uvězněn místo mě neprávem. \n"
@@ -177,7 +177,7 @@ public class HerniPlan implements Subject{
                                                          ,"Chci smrt mého manžela, nic jinného si nepřeji.", "", "",vec01,vec02));
         chram_mrtvych.setPostava(new Postava("hydra","Neumí mluvit...",nicnechce, "","",vec01,vec02));
 
-        aktualniProstor = taverna;  // hra začíná v taverně
+        aktualniProstor = lernovske_baziny;  // hra začíná v taverně
     }
     
     /**

@@ -28,7 +28,7 @@ public class Mapa extends AnchorPane implements Observer {
 
         ImageView obrazekImageView = new ImageView(new Image(Main.class.getResourceAsStream("/zdroje/mapa.png"),500,500,true,true));
 
-        tecka = new Circle(30, Paint.valueOf("red"));
+        tecka = new Circle(10, Paint.valueOf("orange"));
 
 //        this.setTopAnchor(tecka, 0.0);
 //        this.setLeftAnchor(tecka, 0.0);
