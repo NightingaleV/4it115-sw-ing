@@ -152,7 +152,7 @@ public class HerniPlan implements Subject{
                                                            +"Kentaur: jdeš tedy správně bláznivý člověče. Přes hory do rokle. Ovšem v horách žijí harpyje. Bez kopí máš proti nim jen pramalou šanci. \nVezmi si to mé, budeš ho potřebovat."
                                                            ,"Nic nepotřebuji, díky!","","",vec01,vec02));
         hora_ida.setPostava(new Postava("harpyje","Neumí mluvit...",nicnechce, "","",vec01,vec02));
-        rokle_kragu.setPostava(new Postava("chiméra","Neumí mluvit...",nicnechce, "","",vec01,vec02));
+        rokle_kragu.setPostava(new Postava("chimera","Neumí mluvit...",nicnechce, "","",vec01,vec02));
         podsveti.setPostava(new Postava("kerberos","Neumí mluvit, jen vrčet a štěkat...","Vrčí na tebe a nevypadá, že by tohle chtěl.", "Dal jsi Kerberovi medový koláč. Příběhy o Aeneasovi a dalších nelhaly. Hlavy se začínají hádat a prát, která bude jíst. \n"
                                                     +"Vítězí ta prostřední a vychutnává si koláč.",
                                         "Všiml sis, že jedna hlava si v souboji o koláč vyrazila zub, který leží na zemi. Zub sbíráš do batohu, jen tak pro štěstí.",medovnik,zub_03));

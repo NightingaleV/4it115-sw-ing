@@ -58,7 +58,7 @@ public class PrikazBojuj implements IPrikaz
                     +"hluboko do země. Harpyje křičí a mává křídly, je ovšem přibitá k zemi. Bereš svůj meč a dílo dokonáváš. V hnízdě si našel vedle kostí\n"
                     +"také hoplitský štít.\n";
         }
-        else if(postava.getJmeno().equals("chimera") && hra.getBatoh().obsahujeVec("stit") && plan.getBatoh().obsahujeVec("mec"))
+        else if(postava.getJmeno().equals("chimera") && hra.getBatoh().obsahujeVec("stit") && plan.getBatoh().obsahujeVec("mec") && plan.getBatoh().obsahujeVec("bronzova_zbroj"))
         {
             plan.getAktualniProstor().vlozVec(zub_02);
             plan.getAktualniProstor().vymazPostavu("Chiméra");
@@ -67,54 +67,11 @@ public class PrikazBojuj implements IPrikaz
                     +"Monstrum se vzpamatovalo a začalo ustupovat. S respektem v očích se krok po kroku vzdalovalo až zaběhlo zpět do jeskyně. Z ještě se\n"
                     +"mrskajícího dračího ocasu vytrháváš zub pro štěstí.\n";
         }
-
-
-
-
-        if (postava == null) {
-            return "Tato postava v této místnosti není.";
-        }
-        else {
-            if ()) {
-                if () {
-                    if(plan.getBatoh().jeMisto()){
-                        plan.getBatoh().pridejVec(stit);
-                    }
-                    else {
-
-                    }
-
-                }
-                else {
-                    return sebevrazda;
-                    }
-                }
-                
-            if (postava.getJmeno().equals("chimera")) {
-                if (hra.getBatoh().obsahujeVec("stit") && plan.getBatoh().obsahujeVec("mec") && plan.getBatoh().obsahujeVec("bronzova_zbroj")) {
-                    if(hra.getBatoh().jeMisto()){
-                        hra.getBatoh().pridejVec(zub_02);
-                    }
-                    else {
-                        plan.getAktualniProstor().vlozVec(zub_02);
-                    }
-
-                }
-                else {
-                    return sebevrazda;
-                    }
-                }  
-            
-            if (postava.getJmeno().equals("hydra")) {
-                if (hra.getBatoh().obsahujeVec("prsten_moci")) {
-                    if(hra.getBatoh().jeMisto()){
-                        hra.getBatoh().pridejVec(zub_01);
-                    }
-                    else {
-                        plan.getAktualniProstor().vlozVec(zub_01);
-                    }
-                    plan.getAktualniProstor().vymazPostavu("Hydra");
-                    return "BOJ: Hlavou ti běží pochybné myšlenky. Máš zabít nesmrtelné. Přemýšlíš, jestli celá tahle výprava byl dobrý nápad nebo\n"
+        else if(postava.getJmeno().equals("hydra") && hra.getBatoh().obsahujeVec("prsten_moci"))
+        {
+            plan.getAktualniProstor().vlozVec(zub_01);
+            plan.getAktualniProstor().vymazPostavu("Hydra");
+            return "BOJ: Hlavou ti běží pochybné myšlenky. Máš zabít nesmrtelné. Přemýšlíš, jestli celá tahle výprava byl dobrý nápad nebo\n"
                     +"bláznivý nápad čestného muže. Nasadil sis prsten, strach a pochybnosti opadly, cítíš, že svedeš i nemožné. V s kopím v ruce\n"
                     +"pravé, se štítem v té levé se vrháš do chrámu vstříc monstru. Hydra odpočívá u oltáře. Drnčení tvé zbroje jí probudilo.\n"
                     +"\n"
@@ -124,22 +81,11 @@ public class PrikazBojuj implements IPrikaz
                     +"kopí házíš a trefeš krk jeden za druhý, až oštěp projíždí krkem všem osmi hlavám. Řev všech dračích hlav bylo slyšel do všech\n"
                     +"okolních měst a vesnic a lidé utíkali do svých domovů v domnění, že je postihla zloba bohů. Hlavy se nemohou hýbat a ty\n"
                     +"využiješ této chvíle a svým mečem řežeš podél hadího těla až se vysypají všechny vnitřnosti. Hydra padá do kaluže své vlastní\n"
-                    +"krve. Vyrveš dračí zub a dáš ho do batohu.\n"; 
-                }
-                else {
-                    return sebevrazda;
-                    }
-                }
-                
-            if (postava.getJmeno().equals("hades")) {
-                if (hra.getBatoh().obsahujeVec("zub_hydry")) {
-                    if(hra.getBatoh().jeMisto()){
-                        hra.getBatoh().pridejVec(win);
-                    }
-                    else {
-                        plan.getAktualniProstor().vlozVec(win);
-                    }
-                    return "BOJ: Přistoupíš k Hádovi. Tasíš meč. Vládce podsvětí se začne hlasitě smát, poté si všimne tvého dračího náhrdelníku a tvář mu strne.\n"
+                    +"krve. Vyrveš dračí zub a dáš ho do batohu.\n";
+        }
+        else if(postava.getJmeno().equals("hades") && hra.getBatoh().obsahujeVec("zub_hydry")) {
+            hra.getBatoh().pridejVec(win);
+            return "BOJ: Přistoupíš k Hádovi. Tasíš meč. Vládce podsvětí se začne hlasitě smát, poté si všimne tvého dračího náhrdelníku a tvář mu strne.\n"
                     +"Tahem jako malíř kreslící na své plátno setneš hlavu. Nabubřelý bůh okusil lidskou smrtelnost.\n"
                     +"\n"
                     +"Persefona: Dokázal si to, zbavil jsi mě jeho okovů. Podsvětí ovšem musí mít svého vládce, nyní musíš zaujmout jeho místo.\n"
@@ -147,16 +93,15 @@ public class PrikazBojuj implements IPrikaz
                     +"STÁVÁŠ SE BOHEM A VLÁDCEM PODSVĚTÍ\n"
                     +"Ve tvém sídle se koná svatba, na kterou se schází božská smetánka. Loučíš se svým bratrem. Dojemná chvíle nechala v sále\n"
                     +"zatracených ticho. Jednou se zase uvidíme bratře.\n"
-                    +"Hádes od té doby svůj čas tráví v chodbě neklidu, kde se hádá s ostatními, kdo by má větší právo dostat svůj život zpět. "; 
-                }
-                else {
-                    return sebevrazda;
-                    }
-                }      
-            
-            else {
-                return "S touto postavou nelze bojovat";
-            }
+                    +"Hádes od té doby svůj čas tráví v chodbě neklidu, kde se hádá s ostatními, kdo by má větší právo dostat svůj život zpět. ";
+        }
+        else if(
+                postava.getJmeno().equals("hostinsky") && postava.getJmeno().equals("starec") && postava.getJmeno().equals("stamgast")
+                ){
+            return "Tato postava s tebou nechce bojovat.";
+        }
+        else {
+            return sebevrazda;
         }
 
     }
