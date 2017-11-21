@@ -79,7 +79,7 @@ public class Batoh implements Subject
      * @return true pokud je v batohu
      */
     public boolean obsahujeVec (String nazev) {
-        return this.seznamVeci.containsKey(nazev);
+        return seznamVeci.containsKey(nazev);
     }
 
     /**

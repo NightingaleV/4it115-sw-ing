@@ -16,7 +16,7 @@ public class PrikazVezmi implements IPrikaz
     private static final String NAZEV = "vezmi";
     
     private HerniPlan plan;
-
+    public IHra hra;
     //== Konstruktory a tovární metody =============================================
 
     /**
@@ -25,6 +25,7 @@ public class PrikazVezmi implements IPrikaz
     public PrikazVezmi(HerniPlan plan)
     {
         this.plan = plan;
+
     }
     
     
