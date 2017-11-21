@@ -55,8 +55,8 @@ public class PrikazBojuj implements IPrikaz
             plan.getAktualniProstor().vymazPostavu("harpyje");
             return "BOJ: Chvíli je pozoruješ sám schován za kamenem. Všechny za doprovodu krouží nad hnízdem a po chvilce odlétají. Ovšem jedna z nich \n"
                     +"se však vrací a hlídá hnízdo. Neváháš a plný soustředění házíš kopí. Oštěp sviští vzduchem silou blesku. Projel skrze záda a zarazil se\n"
-                    +"hluboko do země. Harpyje křičí a mává křídly, je ovšem přibitá k zemi. Bereš svůj meč a dílo dokonáváš. V hnízdě si našel vedle kostí\n"
-                    +"také hoplitský štít.\n";
+                    +"hluboko do země. Harpyje křičí a mává křídly, je ovšem přibitá k zemi. Bereš svůj meč a dílo dokonáváš. \n"
+                    +"V hnízdě je také hoplitský štít. NAPOVEDA: vem stit\n";
         }
         else if(postava.getJmeno().equals("chimera") && hra.getBatoh().obsahujeVec("stit") && plan.getBatoh().obsahujeVec("mec") && plan.getBatoh().obsahujeVec("bronzova_zbroj"))
         {
@@ -65,7 +65,7 @@ public class PrikazBojuj implements IPrikaz
             return "BOJ: Chiméra vyráží jako první. Plnou rychlostí jde proti tobě. V poslední chvíli sis připravil svůj štít a útok odrazil. Chiméra je v\n"
                     +"okamžiku ochromená nárazem. Ohnal se po tobě dračí ocas, ale hbitě si táhnul svým mečem a s precizností si ho odsekl od zbytku těla.\n"
                     +"Monstrum se vzpamatovalo a začalo ustupovat. S respektem v očích se krok po kroku vzdalovalo až zaběhlo zpět do jeskyně. Z ještě se\n"
-                    +"mrskajícího dračího ocasu vytrháváš zub pro štěstí.\n";
+                    +"mrskajícího dračího ocasu vytrháváš zub pro štěstí. NAPOVEDA: vem zub_chimery\n";
         }
         else if(postava.getJmeno().equals("hydra") && hra.getBatoh().obsahujeVec("prsten_moci"))
         {
@@ -81,11 +81,11 @@ public class PrikazBojuj implements IPrikaz
                     +"kopí házíš a trefeš krk jeden za druhý, až oštěp projíždí krkem všem osmi hlavám. Řev všech dračích hlav bylo slyšel do všech\n"
                     +"okolních měst a vesnic a lidé utíkali do svých domovů v domnění, že je postihla zloba bohů. Hlavy se nemohou hýbat a ty\n"
                     +"využiješ této chvíle a svým mečem řežeš podél hadího těla až se vysypají všechny vnitřnosti. Hydra padá do kaluže své vlastní\n"
-                    +"krve. Vyrveš dračí zub a dáš ho do batohu.\n";
+                    +"krve. Vyrveš dračí zub a dáš ho do batohu. NAPOVEDA: vem zub_hydry\n";
         }
-        else if(postava.getJmeno().equals("hades") && hra.getBatoh().obsahujeVec("zub_hydry")) {
+        else if(postava.getJmeno().equals("hades") && hra.getBatoh().obsahujeVec("prsten_moci")) {
             hra.getBatoh().pridejVec(win);
-            return "BOJ: Přistoupíš k Hádovi. Tasíš meč. Vládce podsvětí se začne hlasitě smát, poté si všimne tvého dračího náhrdelníku a tvář mu strne.\n"
+            return "BOJ: Přistoupíš k Hádovi. Moc prstenu prostupuje tvým tělem. Tasíš meč. \n"
                     +"Tahem jako malíř kreslící na své plátno setneš hlavu. Nabubřelý bůh okusil lidskou smrtelnost.\n"
                     +"\n"
                     +"Persefona: Dokázal si to, zbavil jsi mě jeho okovů. Podsvětí ovšem musí mít svého vládce, nyní musíš zaujmout jeho místo.\n"
