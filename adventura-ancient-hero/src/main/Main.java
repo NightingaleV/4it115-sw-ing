@@ -110,6 +110,8 @@ public class Main extends Application {
         FlowPane levyPanel = new FlowPane();
         levyPanel.setAlignment(Pos.TOP_LEFT);
         levyPanel.getChildren().add(mapa);
+
+        levyPanel.getChildren().add(vychody);
         levyPanel.getChildren().add(obsahBatohu);
         borderPane.setLeft(levyPanel);
 
@@ -130,16 +132,13 @@ public class Main extends Application {
         primaryStage.show();
         zadejPrikazTextArea.requestFocus();
 
-        // seznam vychodu
-        borderPane.setRight(vychody);
+
     }
 
     private ListView nastavVychody() {
         ListView vychody = new ListView();
         ObservableList<String> dataVychodu = FXCollections.observableArrayList();
         vychody.setItems(dataVychodu);
-        vychody.setPrefWidth(100);
-
         for (Prostor prostor : hra.getHerniPlan().getAktualniProstor().getVychody()) {
             dataVychodu.add(prostor.getNazev());
         }

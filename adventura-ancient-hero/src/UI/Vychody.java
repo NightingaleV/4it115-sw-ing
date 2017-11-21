@@ -1,6 +1,7 @@
 package UI;
 
 import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import utils.Observer;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -38,6 +39,6 @@ public class Vychody extends ListView implements Observer{
     private void init(){
         dataVychodu = FXCollections.observableArrayList();
         this.setItems(dataVychodu);
-        this.setPrefSize(200, 450);
+        this.setPrefSize(150, 200);
     }
 }
