@@ -99,18 +99,18 @@ public class HerniPlan implements Subject{
 
         // vytvoříme několik věcí
         Vec pivo = new Vec("pivo", "Pivo s pořádnou pěnou, ale žádnej podmírák.", true);
-        Vec medovnik = new Vec ("medovník","Medový koláč", true);
+        Vec medovnik = new Vec ("medovnik","Medový koláč", true);
         Vec zlata_mince = new Vec("stater", "Zlatá mince", true);
         Vec obolos = new Vec("obolos", "Stribrna mince", true);
-        Vec bronzova_zbroj = new Vec("bronzová_zbroj", "Klasická zbroj, kterou byl vybaven každý hoplita. Teda pokud nebyl zrovna nahý.", true);
-        Vec mec = new Vec("meč", "Klasický xifos. Meč kterým byl vybavený každý hoplita.", true);
-        Vec stit = new Vec("štít", "Štít, kterým by měl být vybavený každý hoplita.", true);
-        Vec stul = new Vec("stůl", "Stůl nakterém je medovník.", false);
+        Vec bronzova_zbroj = new Vec("bronzova_zbroj", "Klasická zbroj, kterou byl vybaven každý hoplita. Teda pokud nebyl zrovna nahý.", true);
+        Vec mec = new Vec("mec", "Klasický xifos. Meč kterým byl vybavený každý hoplita.", true);
+        Vec stit = new Vec("stit", "Štít, kterým by měl být vybavený každý hoplita.", true);
+        Vec stul = new Vec("stul", "Stůl nakterém je medovník.", false);
         Vec prsten = new Vec("prsten_moci", "Z člověka udělá poloboha", true);
-        Vec zub_03 = new Vec("zub_Kerbera", "Zub pekelného psa Kerbera.", true);
-        Vec zub_01 = new Vec("zub_Hydry", "Zub vytržený z těla Hydry", true);
-        Vec zub_02 = new Vec("zub_Chiméry", "Zub vytržený z těla Chiméry", true);
-        Vec vstupenka = new Vec("palubní_lístek", "Permanentka", true);
+        Vec zub_03 = new Vec("zub_kerbera", "Zub pekelného psa Kerbera.", true);
+        Vec zub_01 = new Vec("zub_hydry", "Zub vytržený z těla Hydry", true);
+        Vec zub_02 = new Vec("zub_chimery", "Zub vytržený z těla Chiméry", true);
+        Vec vstupenka = new Vec("palubni_listek", "Permanentka", true);
         Vec vec01 = new Vec("vec01", "", false);
         Vec vec02 = new Vec("vec02", "", false);
         Vec win = new Vec("win", "", true);

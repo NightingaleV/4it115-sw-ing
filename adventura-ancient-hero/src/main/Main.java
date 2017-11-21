@@ -105,14 +105,13 @@ public class Main extends Application {
                 }
             }
         });
-        //obrazek s mapou a batohem
+
+        //panel s mapou a inventarem
         FlowPane levyPanel = new FlowPane();
         levyPanel.setAlignment(Pos.TOP_LEFT);
         levyPanel.getChildren().add(mapa);
         levyPanel.getChildren().add(obsahBatohu);
-
         borderPane.setLeft(levyPanel);
-
 
 
         //dolni lista s elementy
@@ -124,7 +123,7 @@ public class Main extends Application {
         //menu adventury
         borderPane.setTop(menu);
         borderPane.setBottom(dolniLista);
-        Scene scene = new Scene(borderPane, 1260, 800);
+        Scene scene = new Scene(borderPane, 1460, 960);
         primaryStage.setTitle("Adventura Ancient Hero");
 
         primaryStage.setScene(scene);
