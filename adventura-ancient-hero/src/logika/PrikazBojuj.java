@@ -83,7 +83,7 @@ public class PrikazBojuj implements IPrikaz
                     +"využiješ této chvíle a svým mečem řežeš podél hadího těla až se vysypají všechny vnitřnosti. Hydra padá do kaluže své vlastní\n"
                     +"krve. Vyrveš dračí zub a dáš ho do batohu. NAPOVEDA: vem zub_hydry\n";
         }
-        else if(postava.getJmeno().equals("hades") && plan.getBatoh().obsahujeVec("prsten_moci"))
+        else if(postava.getJmeno().equals("hades") && plan.getBatoh().obsahujeVec("zub_hydry") && plan.getBatoh().obsahujeVec("zub_chimery") && plan.getBatoh().obsahujeVec("zub harpyje"))
         {
             hra.getBatoh().pridejVec(win);
             return "BOJ: Přistoupíš k Hádovi. Moc prstenu prostupuje tvým tělem. Tasíš meč. \n"

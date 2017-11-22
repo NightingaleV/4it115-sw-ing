@@ -45,7 +45,7 @@ public class HerniPlan implements Subject{
        
         
         Prostor taverna = new Prostor("taverna","\n"+"Na první pohled obyčejná menší taverna. Na baru přiopitý štamgast vypráví své strasti života \n"
-                                                 +" hostinskému, který však věnuje svou pozornost usměvavé dívce z kuchyně. U blízkého stolu parta \n"
+                                                 +"hostinskému, který však věnuje svou pozornost usměvavé dívce z kuchyně. U blízkého stolu parta \n"
                                                  +"sedláků hraje karty,  pochytil si pár slov z rozhovoru a hádají se, číže kráva nadojí nejvíc. \n"
                 +"U schodů do patra se válí nějaký mince. V rohu sedí uplně sám starý muž v oděvu kněžího a zaujatě \n"
                 +"si čte texty na pergamenu. Na parapetu u okna nechává dívčina vychladnout medový koláč." + "\n", 363,340);
@@ -143,16 +143,19 @@ public class HerniPlan implements Subject{
         
         taverna.setPostava(new Postava("stamgast", "Nějakej problem holomku? Hele kup mi pívo a možná ti nedam na budku",
         "Budeš provokovat, tohle ti nežeru!", "Dík, konečně něco tekutého.", "Pfff, nech si můj meč, já jdu stejně do politiky...", pivo, mec ));
-        taverna.setPostava(new Postava("hostinsky", "Co si dáš mladej, nějaký pívo? Za jeden škopek chci zlaťák, na sekeru nenalejvam. ",
-        "Seš hluchej? Dej mi zlaťák, tohle nechcu!", "Tady máš to pívo mladej.", "Další pívo ti nenaleju, však se tu budeš kolíbat, jak opilý koráb.", zlata_mince, pivo ));
-        taverna.setPostava(new Postava("starec", "Jsem služebník bohů z nedalekého chrámu. Před několika dny na chrám zaútočilo obrovské monstrum. Jako jediný jsem \nstačil utéct. Obluda se tam usadila, pro mě"
-                                                 +"nemá smysl se vracet, raději odcestuji pryč. Čekal jsem, že v chrámu budem v bezpečí,\n že nás ochrání bůh podsvětí, ovšem mýlil jsem se.\n"
-                                                 +"TY: Ty si Hádův služebník, víš jak se dostat do podsvětí?! Chci vykoupit svého bratra ze spárů smrti.\n"
-                                                 +"Stařec: Vím, ale rozmysli než vydáš se tam. Odtud se vrátilo jen pár lidí. Áno, třeba Odysseus, takhle se jeden jmenoval. Taky mladý\na naivní jako ty. Muka ho čekala na"
-                                                 +" cestě tam... Ale dobrá tedy. V rokli za horama je místo, kde se země otevírá mrtvým.\n", 
+        taverna.setPostava(new Postava("hostinsky", "Co si dáš mladej, nějaký pívo? Za jeden škopek chci zlatej stater, na sekeru nenalejvam. ",
+        "Seš hluchej? Dej mi zlatej stater, tohle nechcu!", "Tady máš to pívo mladej.", "Další pívo ti nenaleju, však se tu budeš kolíbat, jak opilý koráb.", zlata_mince, pivo ));
+        taverna.setPostava(new Postava("starec", "Jsem služebník bohů z nedalekého chrámu. Před několika dny na chrám zaútočilo obrovské \n" +
+                "monstrum. Jako jediný jsem stačil utéct. Obluda se tam usadila, pro mě nemá smysl se vracet,\n"
+                +"raději odcestuji pryč. Čekal jsem, že v chrámu budem v bezpečí, že nás ochrání bůh podsvětí, ovšem \nmýlil  jsem se."
+                +"\nTY: Ty si Hádův služebník, víš jak se dostat do podsvětí?! Chci vykoupit svého bratra ze spárů smrti.\n"
+                +"Stařec: Vím, ale rozmysli než vydáš se tam. Odtud se vrátilo jen pár lidí. Áno, třeba Odysseus, takhle \n" +
+                "se jeden jmenoval. Taky mladý a naivní jako ty. Muka ho čekala na cestě tam... Ale dobrá tedy. V rokli \nza horama je místo, kde se země otevírá mrtvým.\n",
         "Nic nepotřebuji, díky!", "", "",vec01,vec02));
-        lernovske_baziny.setPostava(new Postava("kentaur", "Vidím, že si zabloudil, sem žádný člověk z města nezavítá.\nPověděl jsi mu o cestě do podsvětí...\n"
-                                                           +"Kentaur: jdeš tedy správně bláznivý člověče. Přes hory do rokle. Ovšem v horách žijí harpyje. Bez kopí máš proti nim jen pramalou šanci. \nVezmi si to mé, budeš ho potřebovat."
+        lernovske_baziny.setPostava(new Postava("kentaur", "Vidím, že si zabloudil, sem žádný člověk z města nezavítá.\n" +
+                "Pověděl jsi mu o cestě do podsvětí...\n"+
+                "Kentaur: jdeš tedy správně bláznivý člověče. Přes hory do rokle. Ovšem v horách žijí harpyje. Bez kopí \n" +
+                "máš proti nim jen pramalou šanci."
                                                            ,"Nic nepotřebuji, díky!","","",vec01,vec02));
         hora_ida.setPostava(new Postava("harpyje","Neumí mluvit...",nicnechce, "","",vec01,vec02));
         rokle_kragu.setPostava(new Postava("chimera","Neumí mluvit...",nicnechce, "","",vec01,vec02));
@@ -163,20 +166,25 @@ public class HerniPlan implements Subject{
         cesta_smrti.setPostava(new Postava("bratr","Tak se zase setkáváme. Ty ale nejsi mrtvý, znamená to, že jsi se pro mě vrátil?\n"
                                                       +"TY: Jdu za vládcem podsvětí vyjednávat o tvém propuštění. Tvůj život byl příliš krátký a vzat neprávem. Já bych měl být na tvém místě, \nzachránil jsi mi přece život.","Chci se vrátit s tebou na svět.", "","",vec01,vec02));
         sal_zatracenych.setPostava(new Postava("hades","Vzkutku troufalé, aby živý přišel mezi mrtvé. Mladická nerozvážnost...\n"
-                                                      +"TY: Přišel jsem pro svého bratra! Je zde uvězněn místo mě neprávem. \n"
-                                                      +"Hádés: Hm, dobrá tedy. Pustím tvého bratra, pokud pro mě splníš úkol. V mém chrámu se usadila Hydra. Jak víš, hydra je monstrum\n"
-                                                      +"nesmrtelné, usekneš hlavu a narostou jí dvě další. Zab ji pro mě a tvůj bratr může jít. Avšak jako běžný smrtelník nemáš šanci jí\n"
-                                                      +"porazit. Vem si prsten, který dávám svým šampionům. Dodá ti sílu, se kterou se rodí jen bůh. Jako důkaz mi z Hydry dones zub.\n"
-                                                      +"A teď se dej se do práce!\n","Dones mi zub hydry jako důkaz a tvůj bratr může jít.", "Tak ses vrátil, máš pro mě zub jako důkaz?",
-                                                         "Ha, zub z mrtvé hydry. Jak jsem slíbil, tvůj bratr se vrátí mezi živé. Ty máš za sebou dlouhou cestu, posaď se, pojez a pověz mi, jak si\n"
-                                                         +"bojoval s tou mrchou.\n"
-                                                         +"Hoduješ a vyprávíš...\n"
-                                                         +"Hádés: Dobrý souboj, jsem rád, že budu mít za společnost takového válečníka. Pohostil ses u mě v podsvětí, to znamená, že tu musíš\n"
-                                                         +"zůstat. Prsten si nech, zde v podsvětí nemá na tebe žádný vliv. Bude ti připomínat, kdo je tu opravdový král.\n",zub_01,win));
-        sal_zatracenych.setPostava(new Postava("persefona"," Unesl mě a uvěznil, můj mocichtivý manžel.... Mezi mrtvými teď musím celý život být. Za domácího mazlíčka tříhlavého psa\n"
-                                                         +"mám, který v noci leze do postele nám, protože nerad spí sám. Zabij mého manžela, zabij ho pro mě. Dělej jak říká, využij sílu prstenu\n"
-                                                         +"k usmrcení hydry. Vytrhni jí zub. Vím čí zuby již nosíš v batohu. Avšak nevíš, že Chiméra, Kerberos a Hydra jsou sourozenci. Děti\n"
-                                                         +"stohlavého obra Týfóna a Echidny, napůl ženy, napůl hada. Zuby z těchto monster udělají z jejich nositele boha. Využij tuto \nsílu k naplnění svého osudu.\n"
+                +"TY: Přišel jsem pro svého bratra! Je zde uvězněn místo mě neprávem. \n"
+                +"HÁDÉS: Hm, dobrá tedy. Pustím tvého bratra, pokud pro mě splníš úkol. V mém chrámu se usadila Hydra. \n" +
+                "Jak víš, hydra je monstrum nesmrtelné, usekneš hlavu a narostou jí dvě další. Zab ji pro mě a tvůj \n" +
+                "bratr může jít. Avšak jako běžný smrtelník nemáš šanci jí porazit. Vem si prsten, který dávám svým \n" +
+                "šampionům. Dodá ti sílu, se kterou se rodí jen bůh. Jako důkaz mi z Hydry dones zub.\n"
+                +"A teď se dej se do práce!\n","Dones mi zub hydry jako důkaz a tvůj bratr může jít.", "Tak ses vrátil, máš pro mě zub jako důkaz?",
+                "Ha, zub z mrtvé hydry. Jak jsem slíbil, tvůj bratr se vrátí mezi živé. Ty máš za sebou dlouhou cestu,\n" +
+                        "posaď se, pojez a pověz mi, jak si bojoval s tou mrchou.\n"
+                        +"Hoduješ a vyprávíš...\n"
+                        +"Hádés: Dobrý souboj, jsem rád, že budu mít za společnost takového válečníka. Pohostil ses u mě v \n" +
+                        "podsvětí, to znamená, že tu musíš zůstat. Prsten si nech, zde v podsvětí nemá na tebe žádný vliv. \n" +
+                        "Bude ti připomínat, kdo je tu opravdový král.\n",zub_01,win));
+        sal_zatracenych.setPostava(new Postava("persefona"," " +
+                "Unesl mě a uvěznil, můj mocichtivý manžel.... Mezi mrtvými teď musím celý život být. Za domácího \n" +
+                "mazlíčka tříhlavého psa mám, který v noci leze do postele nám, protože nerad spí sám. Zabij mého \n" +
+                "manžela, zabij ho pro mě. Dělej jak říká, využij sílu prstenu k usmrcení hydry. Vytrhni jí zub. Vím\n" +
+                "čí zuby již nosíš v batohu. Avšak nevíš, že Chiméra, Kerberos a Hydra jsou sourozenci. Děti stohlavého\n" +
+                "obra Týfóna a Echidny, napůl ženy, napůl hada. Zuby z těchto monster udělají z jejich nositele boha. \n" +
+                "Využij tuto sílu k naplnění svého osudu.\n"
                                                          ,"Chci smrt mého manžela, nic jinného si nepřeji.", "", "",vec01,vec02));
         chram_mrtvych.setPostava(new Postava("hydra","Neumí mluvit...",nicnechce, "","",vec01,vec02));
 
