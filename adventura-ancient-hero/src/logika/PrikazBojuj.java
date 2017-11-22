@@ -58,7 +58,7 @@ public class PrikazBojuj implements IPrikaz
                     +"hluboko do země. Harpyje křičí a mává křídly, je ovšem přibitá k zemi. Bereš svůj meč a dílo dokonáváš. \n"
                     +"V hnízdě je také hoplitský štít. NAPOVEDA: vem stit\n";
         }
-        else if(postava.getJmeno().equals("chimera") && hra.getBatoh().obsahujeVec("stit") && plan.getBatoh().obsahujeVec("mec") && plan.getBatoh().obsahujeVec("bronzova_zbroj"))
+        else if(postava.getJmeno().equals("chimera") && plan.getBatoh().obsahujeVec("stit") && plan.getBatoh().obsahujeVec("mec") && plan.getBatoh().obsahujeVec("bronzova_zbroj"))
         {
             plan.getAktualniProstor().vlozVec(zub_02);
             plan.getAktualniProstor().vymazPostavu("chimera");
@@ -67,7 +67,7 @@ public class PrikazBojuj implements IPrikaz
                     +"Monstrum se vzpamatovalo a začalo ustupovat. S respektem v očích se krok po kroku vzdalovalo až zaběhlo zpět do jeskyně. Z ještě se\n"
                     +"mrskajícího dračího ocasu vytrháváš zub pro štěstí. NAPOVEDA: vem zub_chimery\n";
         }
-        else if(postava.getJmeno().equals("hydra") && hra.getBatoh().obsahujeVec("prsten_moci"))
+        else if(postava.getJmeno().equals("hydra") && plan.getBatoh().obsahujeVec("prsten_moci"))
         {
             plan.getAktualniProstor().vlozVec(zub_01);
             plan.getAktualniProstor().vymazPostavu("hydra");
@@ -83,7 +83,8 @@ public class PrikazBojuj implements IPrikaz
                     +"využiješ této chvíle a svým mečem řežeš podél hadího těla až se vysypají všechny vnitřnosti. Hydra padá do kaluže své vlastní\n"
                     +"krve. Vyrveš dračí zub a dáš ho do batohu. NAPOVEDA: vem zub_hydry\n";
         }
-        else if(postava.getJmeno().equals("hades") && hra.getBatoh().obsahujeVec("prsten_moci")) {
+        else if(postava.getJmeno().equals("hades") && plan.getBatoh().obsahujeVec("prsten_moci"))
+        {
             hra.getBatoh().pridejVec(win);
             return "BOJ: Přistoupíš k Hádovi. Moc prstenu prostupuje tvým tělem. Tasíš meč. \n"
                     +"Tahem jako malíř kreslící na své plátno setneš hlavu. Nabubřelý bůh okusil lidskou smrtelnost.\n"
@@ -96,7 +97,7 @@ public class PrikazBojuj implements IPrikaz
                     +"Hádes od té doby svůj čas tráví v chodbě neklidu, kde se hádá s ostatními, kdo by má větší právo, dostat svůj život zpět. ";
         }
         else if(
-                postava.getJmeno().equals("hostinsky") && postava.getJmeno().equals("starec") && postava.getJmeno().equals("stamgast")
+                postava.getJmeno().equals("persefona") || postava.getJmeno().equals("bratr") || postava.getJmeno().equals("kerberos") || postava.getJmeno().equals("hostinsky") || postava.getJmeno().equals("starec") || postava.getJmeno().equals("stamgast") || postava.getJmeno().equals("kentaur") || postava.getJmeno().equals("persefona")
                 ){
             return "Tato postava s tebou nechce bojovat.";
         }
@@ -105,8 +106,6 @@ public class PrikazBojuj implements IPrikaz
         }
 
     }
-    
-   
     
     /**
      * Metoda vrací název příkazu (slovo, které používá hrác pro jeho vyvolání

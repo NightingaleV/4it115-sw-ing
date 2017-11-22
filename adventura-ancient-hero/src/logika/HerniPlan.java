@@ -177,7 +177,7 @@ public class HerniPlan implements Subject{
                                                          ,"Chci smrt mého manžela, nic jinného si nepřeji.", "", "",vec01,vec02));
         chram_mrtvych.setPostava(new Postava("hydra","Neumí mluvit...",nicnechce, "","",vec01,vec02));
 
-        aktualniProstor = taverna;  // hra začíná v taverně
+        aktualniProstor = sal_zatracenych;  // hra začíná v taverně
     }
     
     /**
