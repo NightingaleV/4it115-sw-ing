@@ -23,7 +23,7 @@ public class PrikazBatoh implements IPrikaz
      * Prikaz vypise obsah batohu
      */
     public String proved(String... parametry) {
-        if(plan.getBatoh().obsahBatohu().equals("V tvém inventáři se nachází tyto předměty:")){
+        if(plan.getBatoh().obsahBatohu().equals("V tvém inventáři se nachází tyto předměty:\n")){
             return "Tvůj inventář je momentálně prázdný, vezmi nějaký předmět.";}
         else{
             return plan.getBatoh().obsahBatohu();

@@ -62,7 +62,7 @@ public class HerniPlan implements Subject{
                 +"chiméra. Upřeně se na tebe dívá. Naskakuje ti husí kůže. Tohle monstrum má zpředu podobu lva\n"
                 +",zadní část divoké kozy a ocas draka, přímo jak z nejhorší noční můry. \n", 363, 147);
         Prostor podsveti = new Prostor ("podsveti", " \n Jsi konečně zde. Vchod hlídá tříhlavý pes Kerberos. Toto obří stvoření má dech jako hnijící " +
-                "mrtvola a vypadá hladově. Třeba má chuť na koláč \n", 363, 85);
+                "mrtvola a \nvypadá hladově. Třeba má chuť na koláč \n", 363, 85);
         Prostor reka_styx = new Prostor ("reka_styx", "\nU řeky se seskupují zástupy duší a čekají na převozníka. Po chvilce připlouvá loď.\n"
                                                       +"Vystupuje z ní zamračený pohublý stařec a bere od duší mince.\n", 363, 25);
         Prostor cesta_smrti = new Prostor ("cesta_smrti", "Chodba smrti, které duše zoufají nad svou smrtí. Hádají se zde, kdo\n"
@@ -159,12 +159,13 @@ public class HerniPlan implements Subject{
                                                            ,"Nic nepotřebuji, díky!","","",vec01,vec02));
         hora_ida.setPostava(new Postava("harpyje","Neumí mluvit...",nicnechce, "","",vec01,vec02));
         rokle_kragu.setPostava(new Postava("chimera","Neumí mluvit...",nicnechce, "","",vec01,vec02));
-        podsveti.setPostava(new Postava("kerberos","Neumí mluvit, jen vrčet a štěkat...","Vrčí na tebe a nevypadá, že by tohle chtěl.", "Dal jsi Kerberovi medový koláč. Příběhy o Aeneasovi a dalších nelhaly. Hlavy se začínají hádat a prát, která bude jíst. \n"
-                                                    +"Vítězí ta prostřední a vychutnává si koláč.",
-                                        "Všiml sis, že jedna hlava si v souboji o koláč vyrazila zub, který leží na zemi. Zub sbíráš do batohu, jen tak pro štěstí.",medovnik,zub_03));
-        reka_styx.setPostava(new Postava("charon","Ha živý. Takové tu dole moc nevídám. Pro tebe platí stejná pravidla, dej mi minci a převezu tě dál.","Hele chci stříbrnej obolos, jinný uplatky neberu.", "Ha máš minci?","No konečně, tak můžem vyrazit",obolos,vstupenka));
+        podsveti.setPostava(new Postava("kerberos","Neumí mluvit, jen vrčet a štěkat...","Vrčí na tebe a nevypadá, že by tohle chtěl.",
+                "Dal jsi Kerberovi medový koláč. Příběhy o Aeneasovi a dalších nelhaly. Hlavy se začínají \n" +
+                        "hádat a prát, která bude jíst. Vítězí ta prostřední a vychutnává si koláč.",
+                                        "Všiml sis, že jedna hlava si v souboji o koláč vyrazila zub, který leží na zemi. Sebral jsi ho.",medovnik,zub_03));
+        reka_styx.setPostava(new Postava("charon","Ha živý. Takové tu dole moc nevídám. Pro tebe platí stejná pravidla, \ndej mi minci obolos a převezu tě dál.","Hele chci stříbrnej obolos, jinný uplatky neberu.", "Ha máš minci?","No konečně, tak můžem vyrazit",obolos,vstupenka));
         cesta_smrti.setPostava(new Postava("bratr","Tak se zase setkáváme. Ty ale nejsi mrtvý, znamená to, že jsi se pro mě vrátil?\n"
-                                                      +"TY: Jdu za vládcem podsvětí vyjednávat o tvém propuštění. Tvůj život byl příliš krátký a vzat neprávem. Já bych měl být na tvém místě, \nzachránil jsi mi přece život.","Chci se vrátit s tebou na svět.", "","",vec01,vec02));
+                +"TY: Jdu za vládcem podsvětí vyjednávat o tvém propuštění. Tvůj život byl příliš krátký a vzat neprávem.\n Já bych měl být na tvém místě, zachránil jsi mi přece život.","Chci se vrátit s tebou na svět.", "","",vec01,vec02));
         sal_zatracenych.setPostava(new Postava("hades","Vzkutku troufalé, aby živý přišel mezi mrtvé. Mladická nerozvážnost...\n"
                 +"TY: Přišel jsem pro svého bratra! Je zde uvězněn místo mě neprávem. \n"
                 +"HÁDÉS: Hm, dobrá tedy. Pustím tvého bratra, pokud pro mě splníš úkol. V mém chrámu se usadila Hydra. \n" +
