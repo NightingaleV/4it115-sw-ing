@@ -68,7 +68,7 @@ public class MenuPole extends MenuBar{
 
                 webview.getEngine().load(Main.class.getResource("/zdroje/napoveda.html").toExternalForm());
 
-                stage.setScene(new Scene(webview, 500, 500));
+                stage.setScene(new Scene(webview, 600, 960));
                 stage.show();
             }
         });

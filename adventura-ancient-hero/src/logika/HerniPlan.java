@@ -44,31 +44,34 @@ public class HerniPlan implements Subject{
         // vytvářejí se jednotlivé prostory
        
         
-        Prostor taverna = new Prostor("taverna","Na první pohled obyčejná menší taverna. Na baru přiopitý štamgast vypráví své strasti života hostinskému, který však \n"
-                                                 +"věnuje svou pozornost usměvavé dívce z kuchyně. U blízkého stolu parta sedláků hraje karty,  pochytil si pár slov z rozhovoru a\n"
-                                                 +"hádají se, číže kráva nadojí nejvíc. U schodů do patra se válí nějaký mince. V rohu sedí uplně sám starý muž v oděvu\n"
-                                                 +"kněžího a zaujatě si čte texty na pergamenu. Na parapetu u okna nechává dívčina vychladnout medový koláč.\n", 363,340);
-        Prostor zbrojnice = new Prostor("zbrojnice", "Přišel si do zbrojnice. Je naplněná vybavením pro hoplitskou jednotku.\n", 115, 340);
-        Prostor lernovske_baziny = new Prostor("lernovske_baziny", "Vešel jsi do bažin. Všude mlha, sotva se držíš stezky, kterou ušlapala kopyta koní. Cítíš na zádech, že tě někdo pozoruje z povzdálí. \nPro jistotu máš "
-                                                     +"svůj meč připravený v ruce. U pradávného stromu na rozcestí stojí podivná bytost. Napůl muž napůl kůň.\n", 363, 277);
-        Prostor hora_ida = new Prostor ("hora_ida", "Vyšplhal jsi na vrcholek.  Před tebou se otevírá pustina, místo kde nic pozemského \n"
-                                                    +"už nežije ani neroste. Všude jen skály a kameny. Kousek opodál vidíš nějaké hnízdo. Kolem je \n" 
-                                                    +"několik harpyjí. Napůl žena, napůl pták. V hejnu můžou být tvrdým oříškem i pro zkušeného válečníka. \n", 363, 210);
-        Prostor rokle_kragu = new Prostor ("rokle_kragu", "Jdeš po této pustině a cítíš, že podsvětí je blízko. Rozhlédneš se, kolem tebe \n"
-                                                          +"jsou všude kosti, hotové pohřebiště zvířecí i lidské. Slyšíš řev lva. Z jeskyně před tebou vyšla \n"
-                                                          +"chiméra. Upřeně se na tebe dívá. Naskakuje ti husí kůže. Tohle monstrum má zpředu podobu \n"
-                                                          +"lva zadní část divoké kozy ocas draka, přímo jak z nejhorší noční můry. \n", 363, 147);
-        Prostor podsveti = new Prostor ("podsveti", "Jsi konečně zde. Vchod hlídá tříhlavý pes Kerberos. Toto obří stvoření má dech jako hnijící mrtvola a vypadá hladově.\n"
-                                                     +"Třeba má chuť na koláč", 363, 85);
-        Prostor reka_styx = new Prostor ("reka_styx", "U řeky se seskupují zástupy duší a čekají na převozníka. Po chvilce připlouvá loď.\n"
+        Prostor taverna = new Prostor("taverna","\n"+"Na první pohled obyčejná menší taverna. Na baru přiopitý štamgast vypráví své strasti života \n"
+                                                 +" hostinskému, který však věnuje svou pozornost usměvavé dívce z kuchyně. U blízkého stolu parta \n"
+                                                 +"sedláků hraje karty,  pochytil si pár slov z rozhovoru a hádají se, číže kráva nadojí nejvíc. \n"
+                +"U schodů do patra se válí nějaký mince. V rohu sedí uplně sám starý muž v oděvu kněžího a zaujatě \n"
+                +"si čte texty na pergamenu. Na parapetu u okna nechává dívčina vychladnout medový koláč." + "\n", 363,340);
+        Prostor zbrojnice = new Prostor("zbrojnice", "\n Přišel si do zbrojnice. Je naplněná vybavením pro hoplitskou jednotku.\n", 115, 340);
+        Prostor lernovske_baziny = new Prostor("lernovske_baziny", "\n"
+                +"Vešel jsi do bažin. Všude mlha, sotva se držíš stezky, kterou ušlapala kopyta koní. Cítíš na zádech, \n " +
+                "že tě někdo pozoruje z povzdálí. Pro jistotu máš svůj meč připravený v ruce. U pradávného stromu na \n" +
+                "rozcestí stojí podivná bytost. Napůl muž napůl kůň.\n", 363, 277);
+        Prostor hora_ida = new Prostor ("hora_ida", "\nVyšplhal jsi na vrcholek.  Před tebou se otevírá pustina, místo kde nic pozemského už nežije \n " +
+                "ani neroste. Všude jen skály a kameny. Kousek opodál vidíš nějaké hnízdo. Kolem je několik harpyjí. \n" +
+                "Napůl žena, napůl pták. V hejnu můžou být tvrdým oříškem i pro zkušeného válečníka. \n", 363, 210);
+        Prostor rokle_kragu = new Prostor ("rokle_kragu", "\nJdeš po této pustině a cítíš, že podsvětí je blízko. Rozhlédneš se, kolem tebe \n"
+                +"jsou všude kosti, hotové pohřebiště zvířecí i lidské. Slyšíš řev lva. Z jeskyně před tebou vyšla \n"
+                +"chiméra. Upřeně se na tebe dívá. Naskakuje ti husí kůže. Tohle monstrum má zpředu podobu lva\n"
+                +",zadní část divoké kozy a ocas draka, přímo jak z nejhorší noční můry. \n", 363, 147);
+        Prostor podsveti = new Prostor ("podsveti", " \n Jsi konečně zde. Vchod hlídá tříhlavý pes Kerberos. Toto obří stvoření má dech jako hnijící " +
+                "mrtvola a vypadá hladově. Třeba má chuť na koláč \n", 363, 85);
+        Prostor reka_styx = new Prostor ("reka_styx", "\nU řeky se seskupují zástupy duší a čekají na převozníka. Po chvilce připlouvá loď.\n"
                                                       +"Vystupuje z ní zamračený pohublý stařec a bere od duší mince.\n", 363, 25);
         Prostor cesta_smrti = new Prostor ("cesta_smrti", "Chodba smrti, které duše zoufají nad svou smrtí. Hádají se zde, kdo\n"
-                                                            +"má větší právo se vrátit na pozemský svět. Opodál v rohu sedí tvůj mrtvý bratr.\n", 115, 25);
+                +"má větší právo se vrátit na pozemský svět. Opodál v rohu sedí tvůj mrtvý bratr.\n", 115, 25);
         Prostor sal_zatracenych = new Prostor ("sal_zatracenych", "Sál zatracených: Velkolepý sál samotného vládce podsvětí. U hodovního stolu sedí\n"
-                                                                  +"nejstatečnější válečníci, které dostihla smrt v právě probíhající Peloponéské válce. Hádés\n"
-                                                                  +"sedí na svém železném trůně a je potěšen z příjemné společnosti. Opodál sedí sama královna\n"
-                                                                  +"podsvětí Persefona. Nádherná dívka, ze které však srší na pohled smutek a žal.\n", 115, 85);
-        Prostor chram_mrtvych = new Prostor ("chram_mrtvych", "Chrám zpustošený řáděním monstra. Již z dálky slyšíš dračí řev.",115, 277);
+                +"nejstatečnější válečníci, které dostihla smrt v právě probíhající Peloponéské válce. Hádés sedí\n"
+                +"na svém železném trůně a je potěšen z příjemné společnosti. Opodál sedí sama královna podsvětí\n"
+                +"Persefona. Nádherná dívka, ze které však na pohled srší smutek a žal.\n", 115, 85);
+        Prostor chram_mrtvych = new Prostor ("chram_mrtvych", "\nChrám zpustošený řáděním monstra. Již z dálky slyšíš dračí řev.\n",115, 277);
         
 
         // přiřazují se průchody mezi prostory (sousedící prostory)
@@ -177,7 +180,7 @@ public class HerniPlan implements Subject{
                                                          ,"Chci smrt mého manžela, nic jinného si nepřeji.", "", "",vec01,vec02));
         chram_mrtvych.setPostava(new Postava("hydra","Neumí mluvit...",nicnechce, "","",vec01,vec02));
 
-        aktualniProstor = sal_zatracenych;  // hra začíná v taverně
+        aktualniProstor = taverna;  // hra začíná v taverně
     }
     
     /**

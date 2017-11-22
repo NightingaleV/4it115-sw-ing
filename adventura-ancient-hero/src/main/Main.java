@@ -125,7 +125,7 @@ public class Main extends Application {
         //menu adventury
         borderPane.setTop(menu);
         borderPane.setBottom(dolniLista);
-        Scene scene = new Scene(borderPane, 1460, 960);
+        Scene scene = new Scene(borderPane, 1260, 760);
         primaryStage.setTitle("Adventura Ancient Hero");
 
         primaryStage.setScene(scene);
