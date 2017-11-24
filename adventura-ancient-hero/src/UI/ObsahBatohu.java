@@ -1,56 +1,45 @@
 package UI;
 
+import javafx.event.EventHandler;
+import javafx.scene.input.MouseEvent;
 import utils.Observer;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import logika.IHra;
-import logika.Prostor;
+import javafx.scene.control.TextArea;
+import logika.HerniPlan;
+
 import main.Main;
 
 /**
- * Třída ObsahBatohu tvoří grafické zpracování inventáře (obrázky předmětů,
- * které má postava u sebe) pomocí návrhového vzoru Observer. K aktualizaci
- * dochází po přidání/odebrání předmětu.
+ * Graficke zpracovani inventare. Ten take na klik vyhazuje predmety.
  *
- * @author     Marek Bernard
- * @version LS 2017
+ * @author  Slavik
+ * @version ZM 2017
  */
 public class ObsahBatohu extends AnchorPane implements Observer {
 
-    public IHra hra;
+    public  IHra hra;
+    private HerniPlan plan;
+    private TextArea centralText;
 
     /**
-     * Slouží pro inicializaci Observeru
+     * Konstruktor inverntare + inicialuzace observeru
      *
-     * @param hra aktualní hra
+     * @param hra aktualni hra
      */
-    public ObsahBatohu(IHra hra) {
+    public ObsahBatohu(HerniPlan plan, TextArea text, IHra hra) {
         this.hra = hra;
+        this.plan = plan;
         hra.getBatoh().registerObserver(this);
-        //init();
+        centralText = text;
         update();
     }
 
     /**
-     * Slouží pro resetování stavu po zavolání nové hry. Dojde k vymazání všech
-     * zobrazených předmětů, které měla postava u sebe
-     *
-     * @param hra aktuální hra
-     */
-    public void novaHra(IHra hra) {
-        this.hra.getBatoh().deleteObserver(this);
-        this.hra = hra;
-        hra.getBatoh().registerObserver(this);
-        update();
-    }
-
-
-    /**
-     * Slouží pro vykreslení obrázku přemětů, které má postava v inventáři.
-     * Předměty jsou vykreslovány do pole 3x2.
+     * Vykresluje obrazky v inventari
+     * PoziceX == x, nam umozni zvetsit horizontalne inventar
      */
     @Override
     public void update() {
@@ -68,13 +57,22 @@ public class ObsahBatohu extends AnchorPane implements Observer {
             obrazkyPredmetu.setLayoutX(poziceX);
             obrazkyPredmetu.setLayoutY(poziceY);
             poziceX += 100;
-        }
+            obrazkyPredmetu.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    /**
+                     * Event kliknuti na predmet:
+                     * vyhodi predmet, vrati text do hry
+                     */
+                    String prikazHry = "poloz " + batoh;
+                    String odpovedHry = hra.zpracujPrikaz(prikazHry);
 
-    }
-    /**
-     * Slouží pro nastavení šířky
-     */
-    private void init() {
-        this.setPrefWidth(150);
+                    centralText.appendText("\n" + prikazHry + "\n");
+                    centralText.appendText("\n" + odpovedHry + "\n");
+
+                    plan.notifyAllObservers();
+                }
+            });
+        }
     }
 }
