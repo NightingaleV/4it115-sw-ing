@@ -16,7 +16,10 @@ import utils.Observer;
 public class Mapa extends AnchorPane implements Observer {
 
     private IHra hra;
-    private Circle tecka;
+
+    ImageView hoplita = new ImageView(new Image(
+            Main.class.getResourceAsStream("/zdroje/hoplita.png"),
+            50,50,true,true));
 
     public Mapa(IHra hra) {
         this.hra = hra;
@@ -27,22 +30,15 @@ public class Mapa extends AnchorPane implements Observer {
     private void init() {
 
         ImageView obrazekImageView = new ImageView(new Image(Main.class.getResourceAsStream("/zdroje/mapa.png"),500,500,true,true));
-
-        tecka = new Circle(10, Paint.valueOf("orange"));
-
-//        this.setTopAnchor(tecka, 0.0);
-//        this.setLeftAnchor(tecka, 0.0);
-
-        this.getChildren().addAll(obrazekImageView, tecka);
+        this.getChildren().addAll(obrazekImageView, hoplita);
         update();
     }
 
 
-
     @Override
     public void update() {
-        this.setTopAnchor(tecka, hra.getHerniPlan().getAktualniProstor().getPosY());
-        this.setLeftAnchor(tecka, hra.getHerniPlan().getAktualniProstor().getPosX());
+        this.setTopAnchor(hoplita, hra.getHerniPlan().getAktualniProstor().getPosY());
+        this.setLeftAnchor(hoplita, hra.getHerniPlan().getAktualniProstor().getPosX());
     }
 
 
