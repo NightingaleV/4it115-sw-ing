@@ -20,9 +20,11 @@ import main.Main;
  */
 public class MenuPole extends MenuBar{
     private Main main;
+    private Stage stage;
 
-    public MenuPole(Main main){
+    public MenuPole(Main main, Stage stage){
         this.main = main;
+        this.stage = stage;
         init();
     }
 
@@ -85,7 +87,7 @@ public class MenuPole extends MenuBar{
 
             @Override
             public void handle(ActionEvent event) {
-                main.novaHra();
+                main.start(stage);
             }
         });
 
