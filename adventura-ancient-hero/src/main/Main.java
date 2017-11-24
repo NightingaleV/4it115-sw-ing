@@ -68,9 +68,9 @@ public class Main extends Application {
         this.primaryStage = primaryStage;
         hra = new Hra();
         mapa = new Mapa(hra);
-        menu = new MenuPole(this);
+        menu = new MenuPole(this, primaryStage);
         vychody = new Vychody(hra);
-        obsahBatohu = new ObsahBatohu(hra);
+
         BorderPane borderPane = new BorderPane();
 
         // Text s prubehem hry
@@ -106,11 +106,12 @@ public class Main extends Application {
             }
         });
 
+        //inicializace inventare, nutne umistit za konstruktor centralTextu
+        obsahBatohu = new ObsahBatohu(hra.getHerniPlan(), centralText,hra);
         //panel s mapou a inventarem
         FlowPane levyPanel = new FlowPane();
         levyPanel.setAlignment(Pos.TOP_LEFT);
         levyPanel.getChildren().add(mapa);
-
         levyPanel.getChildren().add(vychody);
         levyPanel.getChildren().add(obsahBatohu);
         borderPane.setLeft(levyPanel);
@@ -165,12 +166,6 @@ public class Main extends Application {
         }
     }
 
-    public void novaHra() {
-        hra = new Hra();
-        centralText.setText(hra.vratUvitani());
-        //to same pro vsechny observery
-        mapa.novaHra(hra);
-    }
 
     /**
      * @return the primaryStage
