@@ -30,6 +30,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCombination;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
@@ -62,6 +63,7 @@ public class Main extends Application {
     private Vychody vychody;
     private ObsahBatohu obsahBatohu;
     public HerniPlan herniPlan;
+    public ListView<String>seznamVychodu;
 
     @Override
     public void start(Stage primaryStage) {
@@ -70,6 +72,7 @@ public class Main extends Application {
         mapa = new Mapa(hra);
         menu = new MenuPole(this, primaryStage);
         vychody = new Vychody(hra);
+        seznamVychodu = new ListView<String>();
 
         BorderPane borderPane = new BorderPane();
 
@@ -115,6 +118,16 @@ public class Main extends Application {
         levyPanel.getChildren().add(vychody);
         levyPanel.getChildren().add(obsahBatohu);
         borderPane.setLeft(levyPanel);
+        // klikaci vychody
+        vychody.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                String jmenoVychodu = vychody.getSeznamVychodu().getSelectionModel().getSelectedItem();
+                String vytvorenyPrikaz = "jdi " + jmenoVychodu;
+                String odpovedNaVytvorenyPrikaz = hra.zpracujPrikaz(vytvorenyPrikaz);
+                appendCentralText(odpovedNaVytvorenyPrikaz);
+            }
+        });
 
 
         //dolni lista s elementy
@@ -134,18 +147,10 @@ public class Main extends Application {
         zadejPrikazTextArea.requestFocus();
 
 
+
     }
 
-    private ListView nastavVychody() {
-        ListView vychody = new ListView();
-        ObservableList<String> dataVychodu = FXCollections.observableArrayList();
-        vychody.setItems(dataVychodu);
-        for (Prostor prostor : hra.getHerniPlan().getAktualniProstor().getVychody()) {
-            dataVychodu.add(prostor.getNazev());
-        }
 
-        return vychody;
-    }
     /**
      * @param args the command line arguments
      */
@@ -172,6 +177,12 @@ public class Main extends Application {
      */
     public Stage getPrimaryStage() {
         return primaryStage;
+    }
+    public void appendCentralText(String vstupniPrikaz) {
+        this.getCentralText().appendText("\n" + vstupniPrikaz + "\n");
+    }
+    public TextArea getCentralText() {
+        return centralText;
     }
 
 }

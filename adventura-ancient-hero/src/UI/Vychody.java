@@ -12,7 +12,7 @@ import logika.Prostor;
 public class Vychody extends ListView implements Observer{
 
     public IHra hra;
-    ObservableList<String> dataVychodu;
+    public ObservableList<String> dataVychodu;
 
     public Vychody(IHra hra){
         this.hra = hra;
@@ -40,5 +40,8 @@ public class Vychody extends ListView implements Observer{
         dataVychodu = FXCollections.observableArrayList();
         this.setItems(dataVychodu);
         this.setPrefSize(150, 200);
+    }
+    public ListView<String> getSeznamVychodu() {
+        return this;
     }
 }
