@@ -5,6 +5,7 @@ import javafx.scene.text.FontWeight;
 import utils.Observer;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import logika.IHra;
 import logika.Prostor;
@@ -12,7 +13,8 @@ import logika.Prostor;
 public class Vychody extends ListView implements Observer{
 
     public IHra hra;
-    ObservableList<String> dataVychodu;
+    public ObservableList<String> dataVychodu;
+    private Label vychodLabel;
 
     public Vychody(IHra hra){
         this.hra = hra;
@@ -21,12 +23,6 @@ public class Vychody extends ListView implements Observer{
         update();
     }
 
-    public void novaHra(IHra hra){
-        this.hra.getHerniPlan().deleteObserver(this);
-        this.hra = hra;
-        hra.getHerniPlan().registerObserver(this);
-        update();
-    }
 
     @Override
     public void update(){
@@ -34,11 +30,21 @@ public class Vychody extends ListView implements Observer{
         for (Prostor prostor : hra.getHerniPlan().getAktualniProstor().getVychody()){
             dataVychodu.add(prostor.getNazev());
         }
+        this.vychodLabel = new Label("Východy:");
+        getVychodLabel().setFont(Font.font("Avenir Next", FontWeight.BOLD, 16));
+        getVychodLabel().setPrefWidth(200);
     }
 
     private void init(){
         dataVychodu = FXCollections.observableArrayList();
         this.setItems(dataVychodu);
-        this.setPrefSize(150, 200);
+        this.setPrefSize(200, 200);
+
+    }
+    public ListView<String> getSeznamVychodu() {
+        return this;
+    }
+    public Label getVychodLabel() {
+        return vychodLabel;
     }
 }
