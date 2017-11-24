@@ -61,14 +61,14 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="65" column="13" lean-forward="true" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
+            <state relative-caret-position="305">
+              <caret line="123" column="31" lean-forward="false" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5519#5520#0" expanded="true" />
-                <element signature="e#5554#5555#0" expanded="true" />
-                <marker date="1511556873340" expanded="false" signature="5727:5738" ph=" { " />
-                <marker date="1511556873340" expanded="false" signature="5757:5763" ph=" }" />
+                <element signature="e#5726#5727#0" expanded="true" />
+                <element signature="e#5761#5762#0" expanded="true" />
+                <marker date="1511557924254" expanded="false" signature="5934:5945" ph=" { " />
+                <marker date="1511557924254" expanded="false" signature="5964:5970" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -77,12 +77,12 @@
       <file leaf-file-name="Vychody.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UI/Vychody.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="34" column="21" lean-forward="true" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+            <state relative-caret-position="593">
+              <caret line="40" column="28" lean-forward="false" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#975#976#0" expanded="true" />
-                <element signature="e#1002#1003#0" expanded="true" />
+                <element signature="e#1217#1218#0" expanded="true" />
+                <element signature="e#1244#1245#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -398,7 +398,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24554000" />
+    <option name="totallyTimeSpent" value="26269000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
@@ -560,10 +560,10 @@
           <caret line="127" column="46" lean-forward="false" selection-start-line="127" selection-start-column="46" selection-end-line="127" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5519#5520#0" expanded="true" />
-            <element signature="e#5554#5555#0" expanded="true" />
-            <marker date="1511556873340" expanded="false" signature="5727:5738" ph=" { " />
-            <marker date="1511556873340" expanded="false" signature="5757:5763" ph=" }" />
+            <element signature="e#5726#5727#0" expanded="true" />
+            <element signature="e#5761#5762#0" expanded="true" />
+            <marker date="1511557924254" expanded="false" signature="5934:5945" ph=" { " />
+            <marker date="1511557924254" expanded="false" signature="5964:5970" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -574,8 +574,8 @@
           <caret line="41" column="35" lean-forward="false" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#975#976#0" expanded="true" />
-            <element signature="e#1002#1003#0" expanded="true" />
+            <element signature="e#1217#1218#0" expanded="true" />
+            <element signature="e#1244#1245#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -621,10 +621,10 @@
           <caret line="127" column="46" lean-forward="false" selection-start-line="127" selection-start-column="46" selection-end-line="127" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5519#5520#0" expanded="true" />
-            <element signature="e#5554#5555#0" expanded="true" />
-            <marker date="1511556873340" expanded="false" signature="5727:5738" ph=" { " />
-            <marker date="1511556873340" expanded="false" signature="5757:5763" ph=" }" />
+            <element signature="e#5726#5727#0" expanded="true" />
+            <element signature="e#5761#5762#0" expanded="true" />
+            <marker date="1511557924254" expanded="false" signature="5934:5945" ph=" { " />
+            <marker date="1511557924254" expanded="false" signature="5964:5970" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -635,8 +635,8 @@
           <caret line="41" column="35" lean-forward="false" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#975#976#0" expanded="true" />
-            <element signature="e#1002#1003#0" expanded="true" />
+            <element signature="e#1217#1218#0" expanded="true" />
+            <element signature="e#1244#1245#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -682,10 +682,10 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5519#5520#0" expanded="true" />
-            <element signature="e#5554#5555#0" expanded="true" />
-            <marker date="1511556873340" expanded="false" signature="5727:5738" ph=" { " />
-            <marker date="1511556873340" expanded="false" signature="5757:5763" ph=" }" />
+            <element signature="e#5726#5727#0" expanded="true" />
+            <element signature="e#5761#5762#0" expanded="true" />
+            <marker date="1511557924254" expanded="false" signature="5934:5945" ph=" { " />
+            <marker date="1511557924254" expanded="false" signature="5964:5970" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -696,8 +696,8 @@
           <caret line="41" column="35" lean-forward="false" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#975#976#0" expanded="true" />
-            <element signature="e#1002#1003#0" expanded="true" />
+            <element signature="e#1217#1218#0" expanded="true" />
+            <element signature="e#1244#1245#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -855,26 +855,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UI/Vychody.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="34" column="21" lean-forward="true" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+        <state relative-caret-position="593">
+          <caret line="40" column="28" lean-forward="false" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#975#976#0" expanded="true" />
-            <element signature="e#1002#1003#0" expanded="true" />
+            <element signature="e#1217#1218#0" expanded="true" />
+            <element signature="e#1244#1245#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="65" column="13" lean-forward="true" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
+        <state relative-caret-position="305">
+          <caret line="123" column="31" lean-forward="false" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5519#5520#0" expanded="true" />
-            <element signature="e#5554#5555#0" expanded="true" />
-            <marker date="1511556873340" expanded="false" signature="5727:5738" ph=" { " />
-            <marker date="1511556873340" expanded="false" signature="5757:5763" ph=" }" />
+            <element signature="e#5726#5727#0" expanded="true" />
+            <element signature="e#5761#5762#0" expanded="true" />
+            <marker date="1511557924254" expanded="false" signature="5934:5945" ph=" { " />
+            <marker date="1511557924254" expanded="false" signature="5964:5970" ph=" }" />
           </folding>
         </state>
       </provider>

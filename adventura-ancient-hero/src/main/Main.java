@@ -109,11 +109,13 @@ public class Main extends Application {
         obsahBatohu = new ObsahBatohu(hra.getHerniPlan(), centralText,hra);
         //panel s mapou a inventarem
         FlowPane levyPanel = new FlowPane();
-        levyPanel.setAlignment(Pos.TOP_LEFT);
-        levyPanel.getChildren().add(mapa);
-        levyPanel.getChildren().add(vychody);
-        levyPanel.getChildren().add(obsahBatohu);
+        levyPanel.setAlignment(Pos.TOP_CENTER);
+        levyPanel.setMaxWidth(200);
+        levyPanel.getChildren().addAll(vychody.getVychodLabel(), vychody);
+
         borderPane.setLeft(levyPanel);
+
+
         // klikaci vychody
         vychody.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
@@ -125,6 +127,11 @@ public class Main extends Application {
             }
         });
 
+        FlowPane pravyPanel = new FlowPane();
+        pravyPanel.setAlignment(Pos.TOP_RIGHT);
+        pravyPanel.getChildren().add(mapa);
+        pravyPanel.getChildren().add(obsahBatohu);
+        borderPane.setRight(pravyPanel);
 
         //dolni lista s elementy
         FlowPane dolniLista = new FlowPane();
