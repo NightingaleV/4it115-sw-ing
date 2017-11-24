@@ -10,6 +10,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
+import javafx.geometry.Insets;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import logika.IHra;
@@ -17,7 +19,7 @@ import logika.Vec;
 import main.Main;
 import utils.Observer;
 
-public class VeciProstor extends AnchorPane implements Observer {
+public class VeciProstor extends VBox implements Observer {
 
     private IHra hra;
     /**
@@ -36,10 +38,11 @@ public class VeciProstor extends AnchorPane implements Observer {
         this.hra = hra;
         hra.getHerniPlan().registerObserver(this);
         this.centralText = text;
+
         init();
     }
 
-    private void init() {;
+    private void init() {
         vecLabel = new Label("Věci v prostoru:");
         getVecLabel().setFont(Font.font("Arial", FontWeight.BOLD, 16));
         getVecLabel().setPrefWidth(200);
@@ -53,7 +56,8 @@ public class VeciProstor extends AnchorPane implements Observer {
         for (String vec : mapVeciProstor.keySet()) {
             Vec pomocna = mapVeciProstor.get(vec);
             tlacitkoVeci = new Button(pomocna.getNazev());
-            tlacitkoVeci.setMinSize(50,50);
+            tlacitkoVeci.setMinSize(100,50);
+            tlacitkoVeci.setStyle("-fx-font: 18 arial;");
 
             this.getChildren().add(getTlacitkoVeci());
 
@@ -87,6 +91,8 @@ public class VeciProstor extends AnchorPane implements Observer {
             try {
                 Vec pomocna = mapVeciProstor.get(vec);
                 tlacitkoVeci = new Button(pomocna.getNazev());
+                tlacitkoVeci.setMinSize(100,50);
+                tlacitkoVeci.setStyle("-fx-font: 24 arial;");
 
                 this.getChildren().add(getTlacitkoVeci());
                 tlacitkoVeci.setOnMouseClicked(new EventHandler<MouseEvent>() {

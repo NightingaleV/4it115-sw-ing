@@ -33,7 +33,6 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Paint;
-import javafx.scene.shape.Circle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.geometry.Insets;
@@ -70,7 +69,7 @@ public class Main extends Application {
         menu = new MenuPole(this, primaryStage);
         vychody = new Vychody(hra);
         BorderPane borderPane = new BorderPane();
-        borderPane.setPadding(new Insets(10, 20, 10, 20));
+        borderPane.setPadding(new Insets(0, 20, 0, 20));
         // Text s prubehem hry
         centralText = new TextArea();
         centralText.setText(hra.vratUvitani());
@@ -107,15 +106,15 @@ public class Main extends Application {
         //inicializace inventare + veci v prostoru, nutne umistit za konstruktor centralTextu
         obsahBatohu = new ObsahBatohu(hra.getHerniPlan(), centralText,hra);
         veciProstor = new VeciProstor(hra,centralText);
-        //panel s mapou a inventarem
+        //panel s vychody a veci v prostoru
         FlowPane levyPanel = new FlowPane();
         levyPanel.setAlignment(Pos.TOP_LEFT);
         levyPanel.setMaxWidth(200);
         levyPanel.getChildren().addAll(vychody.getVychodLabel(), vychody);
         levyPanel.getChildren().addAll(veciProstor.getVecLabel(),veciProstor);
-
         borderPane.setLeft(levyPanel);
 
+        vychody.setStyle("-fx-font: 18 arial;");
 
         // klikaci vychody
         vychody.setOnMouseClicked(new EventHandler<MouseEvent>() {
@@ -128,12 +127,13 @@ public class Main extends Application {
             }
         });
 
+        //pravy panel s mapou + batohem
         FlowPane pravyPanel = new FlowPane();
         pravyPanel.setAlignment(Pos.TOP_RIGHT);
         pravyPanel.getChildren().add(mapa);
         pravyPanel.getChildren().add(obsahBatohu);
         borderPane.setRight(pravyPanel);
-        
+
 
         //dolni lista s elementy
         FlowPane dolniLista = new FlowPane();

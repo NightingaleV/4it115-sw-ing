@@ -50,7 +50,7 @@ public class ObsahBatohu extends AnchorPane implements Observer {
             ImageView obrazkyPredmetu = new ImageView(new Image(Main.class.getResourceAsStream("/zdroje/inventar/" + batoh + ".jpg"), 100, 100, false, false));
             this.getChildren().add(obrazkyPredmetu);
 
-            if (poziceX == 300) {
+            if (poziceX == 500) {
                 poziceY = 100;
                 poziceX = 0;
             }
