@@ -61,14 +61,26 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="123" column="31" lean-forward="false" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
+            <state relative-caret-position="391">
+              <caret line="135" column="8" lean-forward="false" selection-start-line="135" selection-start-column="8" selection-end-line="135" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5726#5727#0" expanded="true" />
-                <element signature="e#5761#5762#0" expanded="true" />
-                <marker date="1511557924254" expanded="false" signature="5934:5945" ph=" { " />
-                <marker date="1511557924254" expanded="false" signature="5964:5970" ph=" }" />
+                <element signature="e#5942#5943#0" expanded="true" />
+                <element signature="e#5977#5978#0" expanded="true" />
+                <marker date="1511561661830" expanded="false" signature="6150:6161" ph=" { " />
+                <marker date="1511561661830" expanded="false" signature="6180:6186" ph=" }" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VeciProstor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/UI/VeciProstor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="782">
+              <caret line="55" column="41" lean-forward="false" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -77,18 +89,82 @@
       <file leaf-file-name="Vychody.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UI/Vychody.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="593">
-              <caret line="40" column="28" lean-forward="false" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+            <state relative-caret-position="289">
+              <caret line="20" column="48" lean-forward="false" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1217#1218#0" expanded="true" />
-                <element signature="e#1244#1245#0" expanded="true" />
+                <element signature="e#1211#1212#0" expanded="true" />
+                <element signature="e#1238#1239#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ObsahBatohu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/UI/ObsahBatohu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="551">
+              <caret line="70" column="42" lean-forward="false" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HerniPlan.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/logika/HerniPlan.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-68">
+              <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Vec.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/logika/Vec.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21">
+              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Prostor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/logika/Prostor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="627">
+              <caret line="309" column="8" lean-forward="false" selection-start-line="309" selection-start-column="8" selection-end-line="309" selection-end-column="20" />
+              <folding>
+                <element signature="e#9011#9012#0" expanded="true" />
+                <element signature="e#9038#9039#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PrikazVezmi.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/logika/PrikazVezmi.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="44" column="43" lean-forward="false" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -119,6 +195,8 @@
         <option value="$PROJECT_DIR$/src/UI/ObsahBatohu.java" />
         <option value="$PROJECT_DIR$/src/UI/Mapa.java" />
         <option value="$PROJECT_DIR$/src/UI/Vychody.java" />
+        <option value="$PROJECT_DIR$/src/logika/Prostor.java" />
+        <option value="$PROJECT_DIR$/src/UI/VeciProstor.java" />
         <option value="$PROJECT_DIR$/src/main/Main.java" />
       </list>
     </option>
@@ -398,7 +476,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26269000" />
+    <option name="totallyTimeSpent" value="29330000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
@@ -477,23 +555,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/logika/PrikazBojuj.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="85" column="141" lean-forward="false" selection-start-line="85" selection-start-column="141" selection-end-line="85" selection-end-column="141" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/Mapa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="26" column="6" lean-forward="false" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/logika/HerniPlan.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -560,10 +621,10 @@
           <caret line="127" column="46" lean-forward="false" selection-start-line="127" selection-start-column="46" selection-end-line="127" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5726#5727#0" expanded="true" />
-            <element signature="e#5761#5762#0" expanded="true" />
-            <marker date="1511557924254" expanded="false" signature="5934:5945" ph=" { " />
-            <marker date="1511557924254" expanded="false" signature="5964:5970" ph=" }" />
+            <element signature="e#5942#5943#0" expanded="true" />
+            <element signature="e#5977#5978#0" expanded="true" />
+            <marker date="1511561661830" expanded="false" signature="6150:6161" ph=" { " />
+            <marker date="1511561661830" expanded="false" signature="6180:6186" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -574,8 +635,8 @@
           <caret line="41" column="35" lean-forward="false" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1217#1218#0" expanded="true" />
-            <element signature="e#1244#1245#0" expanded="true" />
+            <element signature="e#1211#1212#0" expanded="true" />
+            <element signature="e#1238#1239#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -621,10 +682,10 @@
           <caret line="127" column="46" lean-forward="false" selection-start-line="127" selection-start-column="46" selection-end-line="127" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5726#5727#0" expanded="true" />
-            <element signature="e#5761#5762#0" expanded="true" />
-            <marker date="1511557924254" expanded="false" signature="5934:5945" ph=" { " />
-            <marker date="1511557924254" expanded="false" signature="5964:5970" ph=" }" />
+            <element signature="e#5942#5943#0" expanded="true" />
+            <element signature="e#5977#5978#0" expanded="true" />
+            <marker date="1511561661830" expanded="false" signature="6150:6161" ph=" { " />
+            <marker date="1511561661830" expanded="false" signature="6180:6186" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -635,8 +696,8 @@
           <caret line="41" column="35" lean-forward="false" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1217#1218#0" expanded="true" />
-            <element signature="e#1244#1245#0" expanded="true" />
+            <element signature="e#1211#1212#0" expanded="true" />
+            <element signature="e#1238#1239#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -682,10 +743,10 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5726#5727#0" expanded="true" />
-            <element signature="e#5761#5762#0" expanded="true" />
-            <marker date="1511557924254" expanded="false" signature="5934:5945" ph=" { " />
-            <marker date="1511557924254" expanded="false" signature="5964:5970" ph=" }" />
+            <element signature="e#5942#5943#0" expanded="true" />
+            <element signature="e#5977#5978#0" expanded="true" />
+            <marker date="1511561661830" expanded="false" signature="6150:6161" ph=" { " />
+            <marker date="1511561661830" expanded="false" signature="6180:6186" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -696,8 +757,8 @@
           <caret line="41" column="35" lean-forward="false" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1217#1218#0" expanded="true" />
-            <element signature="e#1244#1245#0" expanded="true" />
+            <element signature="e#1211#1212#0" expanded="true" />
+            <element signature="e#1238#1239#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -739,13 +800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logika/PrikazVezmi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/logika/Hra.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -779,13 +833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logika/Vec.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/logika/PrikazPoloz.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-138">
@@ -801,31 +848,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/ObserverNovaHra.java" />
-    <entry file="file://$PROJECT_DIR$/src/UI/MenuPole.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="89" column="34" lean-forward="true" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
-          <folding>
-            <element signature="e#2749#2750#0" expanded="false" />
-            <element signature="e#2798#2799#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logika/HerniPlan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1854">
-          <caret line="236" column="34" lean-forward="false" selection-start-line="236" selection-start-column="16" selection-end-line="236" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logika/Batoh.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="933">
-          <caret line="98" column="30" lean-forward="false" selection-start-line="98" selection-start-column="30" selection-end-line="98" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/Observer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -843,6 +865,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/logika/Batoh.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="98" column="30" lean-forward="false" selection-start-line="98" selection-start-column="30" selection-end-line="98" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logika/Vec.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI/MenuPole.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="89" column="34" lean-forward="true" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
+          <folding>
+            <element signature="e#2749#2750#0" expanded="false" />
+            <element signature="e#2798#2799#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logika/PrikazVezmi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="44" column="43" lean-forward="false" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logika/Prostor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="309" column="8" lean-forward="false" selection-start-line="309" selection-start-column="8" selection-end-line="309" selection-end-column="20" />
+          <folding>
+            <element signature="e#9011#9012#0" expanded="true" />
+            <element signature="e#9038#9039#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI/Vychody.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" column="48" lean-forward="false" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1211#1212#0" expanded="true" />
+            <element signature="e#1238#1239#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/UI/ObsahBatohu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
@@ -853,28 +933,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/Vychody.java">
+    <entry file="file://$PROJECT_DIR$/src/logika/HerniPlan.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="593">
-          <caret line="40" column="28" lean-forward="false" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+        <state relative-caret-position="-68">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1217#1218#0" expanded="true" />
-            <element signature="e#1244#1245#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI/VeciProstor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="55" column="41" lean-forward="false" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="123" column="31" lean-forward="false" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
+        <state relative-caret-position="391">
+          <caret line="135" column="8" lean-forward="false" selection-start-line="135" selection-start-column="8" selection-end-line="135" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5726#5727#0" expanded="true" />
-            <element signature="e#5761#5762#0" expanded="true" />
-            <marker date="1511557924254" expanded="false" signature="5934:5945" ph=" { " />
-            <marker date="1511557924254" expanded="false" signature="5964:5970" ph=" }" />
+            <element signature="e#5942#5943#0" expanded="true" />
+            <element signature="e#5977#5978#0" expanded="true" />
+            <marker date="1511561661830" expanded="false" signature="6150:6161" ph=" { " />
+            <marker date="1511561661830" expanded="false" signature="6180:6186" ph=" }" />
           </folding>
         </state>
       </provider>

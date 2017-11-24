@@ -305,4 +305,8 @@ public class Prostor {
     public void setPosY(double posY) {
         this.posY = posY;
     }
+
+    public Map<String, Vec> getVeci() {
+        return veci;
+    }
 }
