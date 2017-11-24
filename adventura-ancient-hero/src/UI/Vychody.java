@@ -21,12 +21,6 @@ public class Vychody extends ListView implements Observer{
         update();
     }
 
-    public void novaHra(IHra hra){
-        this.hra.getHerniPlan().deleteObserver(this);
-        this.hra = hra;
-        hra.getHerniPlan().registerObserver(this);
-        update();
-    }
 
     @Override
     public void update(){
