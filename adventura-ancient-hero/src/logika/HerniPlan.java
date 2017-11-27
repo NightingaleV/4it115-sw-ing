@@ -117,7 +117,7 @@ public class HerniPlan implements Subject{
         Vec vec02 = new Vec("vec02", "", false);
         Vec win = new Vec("win", "", true);
 
-        
+
         rokle_kragu.setZamcena(true);
         rokle_kragu.setKlic(stit);
         podsveti.setZamcena(true);
@@ -132,6 +132,7 @@ public class HerniPlan implements Subject{
         taverna.vlozVec(medovnik);
         taverna.vlozVec(obolos);
         taverna.vlozVec(stul);
+
         
         zbrojnice.vlozVec(bronzova_zbroj);
         zbrojnice.vlozVec(kopi);
@@ -211,7 +212,7 @@ public class HerniPlan implements Subject{
     }
     
     public boolean hracVyhral() {
-        if (getBatoh().obsahujeVec("kopi")) {
+        if (getBatoh().obsahujeVec("win")) {
             return true;
         }
 
