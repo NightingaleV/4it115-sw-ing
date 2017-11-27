@@ -31,14 +31,14 @@ public class Vychody extends ListView implements Observer{
             dataVychodu.add(prostor.getNazev());
         }
         this.vychodLabel = new Label("Východy:");
-        getVychodLabel().setFont(Font.font("Arial", FontWeight.BOLD, 16));
+        getVychodLabel().setFont(Font.font("Arial", FontWeight.BOLD, 18));
         getVychodLabel().setPrefWidth(200);
     }
 
     private void init(){
         dataVychodu = FXCollections.observableArrayList();
         this.setItems(dataVychodu);
-        this.setPrefSize(200, 200);
+        this.setPrefSize(180, 200);
 
     }
     public ListView<String> getSeznamVychodu() {

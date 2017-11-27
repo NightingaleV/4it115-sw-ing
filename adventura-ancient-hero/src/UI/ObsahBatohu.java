@@ -1,7 +1,10 @@
 package UI;
 
 import javafx.event.EventHandler;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import utils.Observer;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -23,6 +26,7 @@ public class ObsahBatohu extends AnchorPane implements Observer {
     public  IHra hra;
     private HerniPlan plan;
     private TextArea centralText;
+    private Label inventarLabel;
 
     /**
      * Konstruktor inverntare + inicialuzace observeru
@@ -44,6 +48,9 @@ public class ObsahBatohu extends AnchorPane implements Observer {
     @Override
     public void update() {
         this.getChildren().clear();
+        inventarLabel = new Label("Inventář:");
+        getInventarLabel().setFont(Font.font("Arial", FontWeight.BOLD, 18));
+        getInventarLabel().setPrefWidth(600);
         int poziceX = 0;
         int poziceY = 0;
         for (String batoh : hra.getBatoh().getObsahBatohu()) {
@@ -74,5 +81,8 @@ public class ObsahBatohu extends AnchorPane implements Observer {
                 }
             });
         }
+    }
+    public Label getInventarLabel() {
+        return inventarLabel;
     }
 }

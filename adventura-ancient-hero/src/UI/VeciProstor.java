@@ -44,7 +44,7 @@ public class VeciProstor extends VBox implements Observer {
 
     private void init() {
         vecLabel = new Label("Věci v prostoru:");
-        getVecLabel().setFont(Font.font("Arial", FontWeight.BOLD, 16));
+        getVecLabel().setFont(Font.font("Arial", FontWeight.BOLD, 18));
         getVecLabel().setPrefWidth(200);
         mapVeciProstor = hra.getHerniPlan().getAktualniProstor().getVeci();
         /**
@@ -57,6 +57,7 @@ public class VeciProstor extends VBox implements Observer {
             Vec pomocna = mapVeciProstor.get(vec);
             tlacitkoVeci = new Button(pomocna.getNazev());
             tlacitkoVeci.setMinSize(100,50);
+            tlacitkoVeci.setPadding(new Insets(5, 5, 5, 5));
             tlacitkoVeci.setStyle("-fx-font: 18 arial;");
 
             this.getChildren().add(getTlacitkoVeci());
@@ -92,7 +93,7 @@ public class VeciProstor extends VBox implements Observer {
                 Vec pomocna = mapVeciProstor.get(vec);
                 tlacitkoVeci = new Button(pomocna.getNazev());
                 tlacitkoVeci.setMinSize(100,50);
-                tlacitkoVeci.setStyle("-fx-font: 24 arial;");
+                tlacitkoVeci.setStyle("-fx-font: 18 arial;");
 
                 this.getChildren().add(getTlacitkoVeci());
                 tlacitkoVeci.setOnMouseClicked(new EventHandler<MouseEvent>() {

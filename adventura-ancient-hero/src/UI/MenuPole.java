@@ -53,8 +53,8 @@ public class MenuPole extends MenuBar{
             public void handle(ActionEvent event) {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("O Adventure");
-                alert.setHeaderText("Toto je ma adventura");
-                alert.setContentText("Graficka verze adventury");
+                alert.setHeaderText("Ancient Hero");
+                alert.setContentText("Vytvořeno k předmětu softwarové inženýrství.\n" + "Autor: Vítězslav Slavík\n" + "Datum: ZS 2017");
                 alert.initOwner(main.getPrimaryStage());
                 alert.showAndWait();
             }
