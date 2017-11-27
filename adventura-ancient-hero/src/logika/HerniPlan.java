@@ -44,34 +44,34 @@ public class HerniPlan implements Subject{
         // vytvářejí se jednotlivé prostory
        
         
-        Prostor taverna = new Prostor("taverna","\n"+"Na první pohled obyčejná menší taverna. Na baru přiopitý štamgast vypráví své strasti života \n"
+        Prostor taverna = new Prostor("taverna","\n"+"Na první pohled obyčejná menší taverna. Na baru přiopitý štamgast s mečem u pasu vypráví své strasti \n"
                                                  +"hostinskému, který však věnuje svou pozornost usměvavé dívce z kuchyně. U blízkého stolu parta \n"
                                                  +"sedláků hraje karty,  pochytil si pár slov z rozhovoru a hádají se, číže kráva nadojí nejvíc. \n"
                 +"U schodů do patra se válí nějaký mince. V rohu sedí uplně sám starý muž v oděvu kněžího a zaujatě \n"
-                +"si čte texty na pergamenu. Na parapetu u okna nechává dívčina vychladnout medový koláč." + "\n", 363,340);
-        Prostor zbrojnice = new Prostor("zbrojnice", "\n Přišel si do zbrojnice. Je naplněná vybavením pro hoplitskou jednotku.\n", 115, 340);
+                +"si čte texty na pergamenu. Na parapetu u okna nechává dívčina vychladnout medový koláč." + "\n", 373,330);
+        Prostor zbrojnice = new Prostor("zbrojnice", "\n Přišel si do zbrojnice. Je naplněná vybavením pro hoplitskou jednotku.\n", 115, 330);
         Prostor lernovske_baziny = new Prostor("lernovske_baziny", "\n"
                 +"Vešel jsi do bažin. Všude mlha, sotva se držíš stezky, kterou ušlapala kopyta koní. Cítíš na zádech, \n " +
                 "že tě někdo pozoruje z povzdálí. Pro jistotu máš svůj meč připravený v ruce. U pradávného stromu na \n" +
-                "rozcestí stojí podivná bytost. Napůl muž napůl kůň.\n", 363, 277);
+                "rozcestí stojí podivná bytost. Napůl muž napůl kůň.\n", 363, 267);
         Prostor hora_ida = new Prostor ("hora_ida", "\nVyšplhal jsi na vrcholek.  Před tebou se otevírá pustina, místo kde nic pozemského už nežije \n " +
                 "ani neroste. Všude jen skály a kameny. Kousek opodál vidíš nějaké hnízdo. Kolem je několik harpyjí. \n" +
-                "Napůl žena, napůl pták. V hejnu můžou být tvrdým oříškem i pro zkušeného válečníka. \n", 363, 210);
+                "Napůl žena, napůl pták. V hejnu můžou být tvrdým oříškem i pro zkušeného válečníka. \n", 363, 200);
         Prostor rokle_kragu = new Prostor ("rokle_kragu", "\nJdeš po této pustině a cítíš, že podsvětí je blízko. Rozhlédneš se, kolem tebe \n"
                 +"jsou všude kosti, hotové pohřebiště zvířecí i lidské. Slyšíš řev lva. Z jeskyně před tebou vyšla \n"
                 +"chiméra. Upřeně se na tebe dívá. Naskakuje ti husí kůže. Tohle monstrum má zpředu podobu lva\n"
-                +",zadní část divoké kozy a ocas draka, přímo jak z nejhorší noční můry. \n", 363, 147);
-        Prostor podsveti = new Prostor ("podsveti", " \n Jsi konečně zde. Vchod hlídá tříhlavý pes Kerberos. Toto obří stvoření má dech jako hnijící " +
-                "mrtvola a vypadá hladově. Třeba má chuť na koláč \n", 363, 85);
+                +",zadní část divoké kozy a ocas draka, přímo jak z nejhorší noční můry. \n", 363, 137);
+        Prostor podsveti = new Prostor ("podsveti", " \n Jsi konečně zde. Vchod hlídá tříhlavý pes Kerberos. Toto obří stvoření má dech jako hnijící" +
+                "\nmrtvola a vypadá hladově. Třeba má chuť na koláč \n", 363, 75);
         Prostor reka_styx = new Prostor ("reka_styx", "\nU řeky se seskupují zástupy duší a čekají na převozníka. Po chvilce připlouvá loď.\n"
-                                                      +"Vystupuje z ní zamračený pohublý stařec a bere od duší mince.\n", 363, 25);
+                                                      +"Vystupuje z ní zamračený pohublý stařec a bere od duší mince.\n", 363, 15);
         Prostor cesta_smrti = new Prostor ("cesta_smrti", "Chodba smrti, které duše zoufají nad svou smrtí. Hádají se zde, kdo\n"
-                +"má větší právo se vrátit na pozemský svět. Opodál v rohu sedí tvůj mrtvý bratr.\n", 115, 25);
+                +"má větší právo se vrátit na pozemský svět. Opodál v rohu sedí tvůj mrtvý bratr.\n", 115, 15);
         Prostor sal_zatracenych = new Prostor ("sal_zatracenych", "Sál zatracených: Velkolepý sál samotného vládce podsvětí. U hodovního stolu sedí\n"
                 +"nejstatečnější válečníci, které dostihla smrt v právě probíhající Peloponéské válce. Hádés sedí\n"
                 +"na svém železném trůně a je potěšen z příjemné společnosti. Opodál sedí sama královna podsvětí\n"
-                +"Persefona. Nádherná dívka, ze které však na pohled srší smutek a žal.\n", 115, 85);
-        Prostor chram_mrtvych = new Prostor ("chram_mrtvych", "\nChrám zpustošený řáděním monstra. Již z dálky slyšíš dračí řev.\n",115, 277);
+                +"Persefona. Nádherná dívka, ze které však na pohled srší smutek a žal.\n", 115, 75);
+        Prostor chram_mrtvych = new Prostor ("chram_mrtvych", "\nChrám zpustošený řáděním monstra. Již z dálky slyšíš dračí řev.\n",115, 267);
         
 
         // přiřazují se průchody mezi prostory (sousedící prostory)
@@ -96,9 +96,7 @@ public class HerniPlan implements Subject{
         cesta_smrti.setVychod(sal_zatracenych);
         sal_zatracenych.setVychod(lernovske_baziny);
         sal_zatracenych.setVychod(cesta_smrti);
-        
-        
-        
+
 
         // vytvoříme několik věcí
         Vec pivo = new Vec("pivo", "Pivo s pořádnou pěnou, ale žádnej podmírák.", true);
@@ -119,7 +117,7 @@ public class HerniPlan implements Subject{
         Vec vec02 = new Vec("vec02", "", false);
         Vec win = new Vec("win", "", true);
 
-        
+
         rokle_kragu.setZamcena(true);
         rokle_kragu.setKlic(stit);
         podsveti.setZamcena(true);
@@ -134,12 +132,12 @@ public class HerniPlan implements Subject{
         taverna.vlozVec(medovnik);
         taverna.vlozVec(obolos);
         taverna.vlozVec(stul);
+
         
         zbrojnice.vlozVec(bronzova_zbroj);
         zbrojnice.vlozVec(kopi);
         sal_zatracenych.vlozVec(prsten);
-        
-        
+
         
         taverna.setPostava(new Postava("stamgast", "Nějakej problem holomku? Hele kup mi pívo a možná ti nedam na budku",
         "Budeš provokovat, tohle ti nežeru!", "Dík, konečně něco tekutého.", "Pfff, nech si můj meč, já jdu stejně do politiky...", pivo, mec ));
@@ -155,21 +153,22 @@ public class HerniPlan implements Subject{
         lernovske_baziny.setPostava(new Postava("kentaur", "Vidím, že si zabloudil, sem žádný člověk z města nezavítá.\n" +
                 "Pověděl jsi mu o cestě do podsvětí...\n"+
                 "Kentaur: jdeš tedy správně bláznivý člověče. Přes hory do rokle. Ovšem v horách žijí harpyje. Bez kopí \n" +
-                "máš proti nim jen pramalou šanci."
+                "máš proti nim jen pramalou šanci. Dál se nachází hnízdo chiméry, jít proti ní bez hoplitského brnění,\nštítu a meče by byl velmi špatný nápad."
                                                            ,"Nic nepotřebuji, díky!","","",vec01,vec02));
         hora_ida.setPostava(new Postava("harpyje","Neumí mluvit...",nicnechce, "","",vec01,vec02));
         rokle_kragu.setPostava(new Postava("chimera","Neumí mluvit...",nicnechce, "","",vec01,vec02));
-        podsveti.setPostava(new Postava("kerberos","Neumí mluvit, jen vrčet a štěkat...","Vrčí na tebe a nevypadá, že by tohle chtěl.", "Dal jsi Kerberovi medový koláč. Příběhy o Aeneasovi a dalších nelhaly. Hlavy se začínají hádat a prát, která bude jíst. \n"
+        podsveti.setPostava(new Postava("kerberos","Neumí mluvit, jen vrčet a štěkat...","Vrčí na tebe a nevypadá, že by tohle chtěl.", "Dal jsi Kerberovi medový koláč. Příběhy o Aeneasovi a dalších nelhaly. Hlavy se začínají hádat \na prát, která bude jíst."
                                                     +"Vítězí ta prostřední a vychutnává si koláč.",
-                                        "Všiml sis, že jedna hlava si v souboji o koláč vyrazila zub, který leží na zemi. Zub sbíráš do batohu, jen tak pro štěstí.",medovnik,zub_03));
+                                        "Všiml sis, že jedna hlava si v souboji o koláč vyrazila zub, který leží na zemi. \nZub sbíráš do batohu, jen tak pro štěstí.",medovnik,zub_03));
         reka_styx.setPostava(new Postava("charon","Ha živý. Takové tu dole moc nevídám. Pro tebe platí stejná pravidla, dej mi minci a převezu tě dál.","Hele chci stříbrnej obolos, jinný uplatky neberu.", "Ha máš minci?","No konečně, tak můžem vyrazit",obolos,vstupenka));
         cesta_smrti.setPostava(new Postava("bratr","Tak se zase setkáváme. Ty ale nejsi mrtvý, znamená to, že jsi se pro mě vrátil?\n"
                                                       +"TY: Jdu za vládcem podsvětí vyjednávat o tvém propuštění. Tvůj život byl příliš krátký a vzat neprávem. Já bych měl být na tvém místě, \nzachránil jsi mi přece život.","Chci se vrátit s tebou na svět.", "","",vec01,vec02));
         sal_zatracenych.setPostava(new Postava("hades","Vzkutku troufalé, aby živý přišel mezi mrtvé. Mladická nerozvážnost...\n"
                 +"TY: Přišel jsem pro svého bratra! Je zde uvězněn místo mě neprávem. \n"
+                +"\n"
                 +"HÁDÉS: Hm, dobrá tedy. Pustím tvého bratra, pokud pro mě splníš úkol. V mém chrámu se usadila Hydra. \n" +
                 "Jak víš, hydra je monstrum nesmrtelné, usekneš hlavu a narostou jí dvě další. Zab ji pro mě a tvůj \n" +
-                "bratr může jít. Avšak jako běžný smrtelník nemáš šanci jí porazit. Vem si prsten, který dávám svým \n" +
+                "bratr může jít.\n\n Avšak jako běžný smrtelník nemáš šanci jí porazit. Vem si prsten, který dávám svým \n" +
                 "šampionům. Dodá ti sílu, se kterou se rodí jen bůh. Jako důkaz mi z Hydry dones zub.\n"
                 +"A teď se dej se do práce!\n","Dones mi zub hydry jako důkaz a tvůj bratr může jít.", "Tak ses vrátil, máš pro mě zub jako důkaz?",
                 "Ha, zub z mrtvé hydry. Jak jsem slíbil, tvůj bratr se vrátí mezi živé. Ty máš za sebou dlouhou cestu,\n" +
@@ -177,11 +176,12 @@ public class HerniPlan implements Subject{
                         +"Hoduješ a vyprávíš...\n"
                         +"Hádés: Dobrý souboj, jsem rád, že budu mít za společnost takového válečníka. Pohostil ses u mě v \n" +
                         "podsvětí, to znamená, že tu musíš zůstat. Prsten si nech, zde v podsvětí nemá na tebe žádný vliv. \n" +
-                        "Bude ti připomínat, kdo je tu opravdový král.\n",zub_01,win));
+                        "Bude ti připomínat, kdo je tu opravdový král.\n", zub_01, win));
         sal_zatracenych.setPostava(new Postava("persefona"," " +
-                "Unesl mě a uvěznil, můj mocichtivý manžel.... Mezi mrtvými teď musím celý život být. Za domácího \n" +
-                "mazlíčka tříhlavého psa mám, který v noci leze do postele nám, protože nerad spí sám. Zabij mého \n" +
-                "manžela, zabij ho pro mě. Dělej jak říká, využij sílu prstenu k usmrcení hydry. Vytrhni jí zub. Vím\n" +
+                "Unesl mě a uvěznil, můj mocichtivý manžel.... Mezi mrtvými teď musím celý život být. Za  \n" +
+                "domácího mazlíčka tříhlavého psa mám, který v noci leze do postele nám, protože nerad spí sám. \n" +
+                "\n"+
+                "Zabij mého manžela, zabij ho pro mě. Dělej jak říká, využij sílu prstenu k usmrcení hydry. Vytrhni jí zub. Vím\n" +
                 "čí zuby již nosíš v batohu. Avšak nevíš, že Chiméra, Kerberos a Hydra jsou sourozenci. Děti stohlavého\n" +
                 "obra Týfóna a Echidny, napůl ženy, napůl hada. Zuby z těchto monster udělají z jejich nositele boha. \n" +
                 "Využij tuto sílu k naplnění svého osudu.\n"

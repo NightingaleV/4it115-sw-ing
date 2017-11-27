@@ -60,6 +60,7 @@ public class Main extends Application {
     private Vychody vychody;
     private ObsahBatohu obsahBatohu;
     private VeciProstor veciProstor;
+    private PanelPostav panelPostav;
     public HerniPlan plan;
     @Override
     public void start(Stage primaryStage) {
@@ -68,8 +69,10 @@ public class Main extends Application {
         mapa = new Mapa(hra);
         menu = new MenuPole(this, primaryStage);
         vychody = new Vychody(hra);
+
         BorderPane borderPane = new BorderPane();
-        borderPane.setPadding(new Insets(0, 20, 0, 20));
+        borderPane.setPadding(new Insets(0, 0, 0, 20));
+
         // Text s prubehem hry
         centralText = new TextArea();
         centralText.setText(hra.vratUvitani());
@@ -79,7 +82,8 @@ public class Main extends Application {
 
         //label s textem zadej prikaz
         Label zadejPrikazLabel = new Label("Zadej prikaz: ");
-        zadejPrikazLabel.setFont(Font.font("Arial", FontWeight.BOLD, 16));
+        zadejPrikazLabel.setFont(Font.font("Arial", FontWeight.BOLD, 18));
+        zadejPrikazLabel.setPadding(new Insets(10, 10, 10, 10));
 
         // text area do ktere piseme prikazy
         zadejPrikazTextArea = new TextField("Zadej prikaz");
@@ -106,6 +110,7 @@ public class Main extends Application {
         //inicializace inventare + veci v prostoru, nutne umistit za konstruktor centralTextu
         obsahBatohu = new ObsahBatohu(hra.getHerniPlan(), centralText,hra);
         veciProstor = new VeciProstor(hra,centralText);
+        panelPostav = new PanelPostav(plan, centralText ,hra);
         //panel s vychody a veci v prostoru
         FlowPane levyPanel = new FlowPane();
         levyPanel.setAlignment(Pos.TOP_LEFT);
@@ -113,7 +118,9 @@ public class Main extends Application {
         levyPanel.getChildren().addAll(vychody.getVychodLabel(), vychody);
         levyPanel.getChildren().addAll(veciProstor.getVecLabel(),veciProstor);
         borderPane.setLeft(levyPanel);
-
+        vychody.getVychodLabel().setPadding(new Insets(20, 10, 10, 10));
+        veciProstor.getVecLabel().setPadding(new Insets(20, 10, 10, 10));
+        veciProstor.setSpacing(10);
         vychody.setStyle("-fx-font: 18 arial;");
 
         // klikaci vychody
@@ -131,7 +138,10 @@ public class Main extends Application {
         FlowPane pravyPanel = new FlowPane();
         pravyPanel.setAlignment(Pos.TOP_RIGHT);
         pravyPanel.getChildren().add(mapa);
-        pravyPanel.getChildren().add(obsahBatohu);
+        pravyPanel.getChildren().addAll(panelPostav.getPostavyLabel(),panelPostav);
+        pravyPanel.getChildren().addAll(obsahBatohu.getInventarLabel(),obsahBatohu);
+        panelPostav.getPostavyLabel().setPadding(new Insets(20, 10, 10, 20));
+        obsahBatohu.getInventarLabel().setPadding(new Insets(20, 10, 10, 20));
         borderPane.setRight(pravyPanel);
 
 
@@ -140,18 +150,15 @@ public class Main extends Application {
         dolniLista.setAlignment(Pos.CENTER);
         dolniLista.getChildren().addAll(zadejPrikazLabel,zadejPrikazTextArea);
 
-
         //menu adventury
         borderPane.setTop(menu);
         borderPane.setBottom(dolniLista);
-        Scene scene = new Scene(borderPane, 1260, 760);
-        primaryStage.setTitle("Adventura Ancient Hero");
+        Scene scene = new Scene(borderPane, 1600, 860);
+        primaryStage.setTitle("Adventura Ancient Hero V2.0");
 
         primaryStage.setScene(scene);
         primaryStage.show();
         zadejPrikazTextArea.requestFocus();
-
-
 
     }
 

@@ -26,7 +26,7 @@ public class Prostor {
     private String nazev;
     private String popis;
     private Set<Prostor> vychody;   // obsahuje sousední místnosti
-    private Set<Postava> postavy;
+    public Map<String, Postava> seznamPostav;
     private Map<String, Vec> veci;
     private boolean zamcena = false;
     private Vec klic;
@@ -48,7 +48,7 @@ public class Prostor {
         this.posY = posY;
         vychody = new HashSet<>();
         veci = new HashMap<>();
-        postavy = new HashSet <Postava> ();
+        seznamPostav = new HashMap<>();
         this.zamcena = zamcena;
     }
 
@@ -195,7 +195,7 @@ public class Prostor {
     public Collection<Prostor> getVychody() {
         return Collections.unmodifiableCollection(vychody);
     }
-    
+
     /**
      * Vraci, zda je prostor zamcenej
      *
@@ -239,22 +239,21 @@ public class Prostor {
      * @return osoba
      */
     public void setPostava(Postava o) {
-        postavy.add (o);
+        seznamPostav.put(o.getJmeno(), o);
     }
+
+    public Collection<String> getPostavy() {
+
+        return Collections.unmodifiableCollection(seznamPostav.keySet());
+
+    }
+
+    public Postava removePostava(String jmeno) {
+        return seznamPostav.remove(jmeno);
+    }
+
     
-    /**
-     * Vymaze osobu ze hry
-     * @return osoba
-     */
-    public Postava vymazPostavu(String nick) {
-        for ( Postava u : postavy ){
-            if (u.getJmeno().equals(nick)) {
-                Postava vybranaOsoba = u;
-                postavy.remove(u);
-                return vybranaOsoba;
-            }}
-        return null;
-    }
+
     
     /**
      * Vypise seznam postav v mistnosti
@@ -262,11 +261,11 @@ public class Prostor {
      */
     public String seznamPostav() {
         String seznam = "\nPOSTAVY: ";
-        if (postavy.size()==0){
+        if (getPostavy().size()==0){
             seznam = seznam + " Žádné postavy se zde nenacházejí.";}
         else{
-            for (Postava u : postavy) {
-                seznam += "\n - " + u.getJmeno();
+            for (String u : getPostavy()) {
+                seznam += "\n - " + u;
             }}
         return seznam;
     }
@@ -275,14 +274,10 @@ public class Prostor {
      * Vybere postavu pro pouziti prikazu dej
      * @return postava
      */
-    public Postava vyberPostava (String jm) {
-        for ( Postava u : postavy ){
-            if (u.getJmeno().equals(jm)) {
-                return u;
-            }}
-        return null;
+    public Postava vyberPostava(String jmeno) {
+        return seznamPostav.get(jmeno);
     }
-    
+
     /**
      * Vyhodi predmet z mistnosti
      */
@@ -309,4 +304,10 @@ public class Prostor {
     public Map<String, Vec> getVeci() {
         return veci;
     }
+
+    public Map<String, Postava> getSeznamPostav() {
+        return seznamPostav;
+    }
+
+
 }
