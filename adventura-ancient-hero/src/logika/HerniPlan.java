@@ -211,7 +211,7 @@ public class HerniPlan implements Subject{
     }
     
     public boolean hracVyhral() {
-        if (getBatoh().obsahujeVec("win")) {
+        if (getBatoh().obsahujeVec("kopi")) {
             return true;
         }
 

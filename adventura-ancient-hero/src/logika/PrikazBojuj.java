@@ -93,6 +93,7 @@ public class PrikazBojuj implements IPrikaz
         else if(postava.getJmeno().equals("hades") && plan.getBatoh().obsahujeVec("zub_hydry") && plan.getBatoh().obsahujeVec("zub_chimery") && plan.getBatoh().obsahujeVec("zub_kerbera"))
         {
             hra.getBatoh().pridejVec(win);
+            plan.notifyAllObservers();
             return "BOJ: Přistoupíš k Hádovi. Moc prstenu prostupuje tvým tělem. Tasíš meč. \n"
                     +"Tahem jako malíř kreslící na své plátno setneš hlavu. Nabubřelý bůh okusil lidskou smrtelnost.\n"
                     +"\n"
