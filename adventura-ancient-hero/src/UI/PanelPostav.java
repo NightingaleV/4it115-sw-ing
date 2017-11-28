@@ -51,7 +51,6 @@ public class PanelPostav extends AnchorPane implements Observer {
         hra.getHerniPlan().registerObserver(this);
         centralText = text;
         update();
-
     }
 
     /**

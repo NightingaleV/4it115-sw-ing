@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="adventura_ancient_hero.jnlp">
+    <information>
+        <title>Main</title>
+        <vendor>Unknown</vendor>
+        <description>Main</description>
+        <offline-allowed/>
+    </information>
+    <update check="background"/>
+    <resources>
+        <j2se version="9.0.1+" href="http://java.sun.com/products/autodl/j2se"/>
+        <jar href="adventura_ancient_hero.jar" size="2725144" download="eager"/>
+    </resources>
+    <jfx:javafx-desc width="1600" height="860" main-class="main.Main" name="Main"/>
+</jnlp>
+

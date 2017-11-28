@@ -18,13 +18,10 @@ import utils.Subject;
  */
 public class HerniPlan implements Subject{
 
-    
     private String nicnechce = "Nezaslouží si nic jinného než smrt.";
     private Prostor aktualniProstor;
     private Batoh batoh;
-
     private List<Observer> listObserveru = new ArrayList<>();
-    // private Batoh batoh;
 
     /**
      *  Konstruktor který vytváří jednotlivé prostory a propojuje je pomocí východů.
@@ -33,8 +30,6 @@ public class HerniPlan implements Subject{
     public HerniPlan() {
         zalozProstoryHry();
         batoh = new Batoh();
-
-        // this.batoh = new Batoh();
     }
     /**
      *  Vytváří jednotlivé prostory a propojuje je pomocí východů.
@@ -42,8 +37,7 @@ public class HerniPlan implements Subject{
      */
     private void zalozProstoryHry() {
         // vytvářejí se jednotlivé prostory
-       
-        
+
         Prostor taverna = new Prostor("taverna","\n"+"Na první pohled obyčejná menší taverna. Na baru přiopitý štamgast s mečem u pasu vypráví své strasti \n"
                                                  +"hostinskému, který však věnuje svou pozornost usměvavé dívce z kuchyně. U blízkého stolu parta \n"
                                                  +"sedláků hraje karty,  pochytil si pár slov z rozhovoru a hádají se, číže kráva nadojí nejvíc. \n"
@@ -96,8 +90,6 @@ public class HerniPlan implements Subject{
         cesta_smrti.setVychod(sal_zatracenych);
         sal_zatracenych.setVychod(lernovske_baziny);
         sal_zatracenych.setVychod(cesta_smrti);
-
-
 
 
         // vytvoříme několik věcí

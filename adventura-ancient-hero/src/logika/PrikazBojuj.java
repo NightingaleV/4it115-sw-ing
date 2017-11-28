@@ -27,7 +27,6 @@ public class PrikazBojuj implements IPrikaz
     /**
      * Provadi prikaz bojuj, provede boj s postavou. Pri vyhranem boji, prida predmet
      *
-     * @param nazev postavy se kterou chce hrac bojovat
      * @return zpráva, kterou hra vypíše hráči
      */
     public String proved(String... parametry) {
@@ -43,7 +42,6 @@ public class PrikazBojuj implements IPrikaz
         Vec zub_04 = new Vec("zub_hydry", "Zub vytržený z těla Hydry", true);
         Vec zub_02 = new Vec("zub_chimery", "Zub vytržený z těla Chiméry", true);
         Vec win = new Vec("win", "", true);
-
 
         if (postava == null)
         {
@@ -71,7 +69,7 @@ public class PrikazBojuj implements IPrikaz
                     +"ustupovat. S respektem v očích se krok po kroku vzdalovalo až zaběhlo zpět do jeskyně. Z ještě se\n"
                     +"mrskajícího dračího ocasu vytrháváš zub pro štěstí. NAPOVEDA: vem zub_chimery\n";
         }
-        else if(postava.getJmeno().equals("hydra"))
+        else if(postava.getJmeno().equals("hydra") && plan.getBatoh().obsahujeVec("prsten_moci"))
         {
             plan.getAktualniProstor().vlozVec(zub_04);
             plan.getAktualniProstor().removePostava("hydra");
@@ -100,7 +98,7 @@ public class PrikazBojuj implements IPrikaz
                     +"\n"
                     +"Persefona: Dokázal si to, zbavil jsi mě jeho okovů. Podsvětí ovšem musí mít svého vládce, nyní musíš zaujmout\n"
                     +"jeho místo. Ráda budu ženou udatného muže jako jsi ty.\n"
-                    +"STÁVÁŠ SE BOHEM A VLÁDCEM PODSVĚTÍ\n"
+                    +"STÁVÁŠ SE BOHEM A VLÁDCEM PODSVĚTÍ\n\n"
                     +"Ve tvém sídle se koná svatba, na kterou se schází božská smetánka. Loučíš se svým bratrem. Dojemná chvíle \n"
                     +"zanechala v sále zatracených ticho. Jednou se zase uvidíme, bratře.\n"
                     +"Hádes od té doby svůj čas tráví v chodbě neklidu, kde se hádá s ostatními, kdo by má větší právo, \ndostat svůj život zpět. ";
