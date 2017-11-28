@@ -55,8 +55,7 @@ public class PanelPostav extends AnchorPane implements Observer {
     }
 
     /**
-     * Vykresluje obrazky v inventari
-     * PoziceX == x, nam umozni zvetsit horizontalne inventar
+     * Vykresluje postavy a na klik mluvi
      */
     @Override
     public void update() {

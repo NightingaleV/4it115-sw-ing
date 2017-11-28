@@ -43,7 +43,6 @@ public class ObsahBatohu extends AnchorPane implements Observer {
 
     /**
      * Vykresluje obrazky v inventari
-     * PoziceX == x, nam umozni zvetsit horizontalne inventar
      */
     @Override
     public void update() {

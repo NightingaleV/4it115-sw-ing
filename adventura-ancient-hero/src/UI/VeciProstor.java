@@ -22,17 +22,14 @@ import utils.Observer;
 public class VeciProstor extends VBox implements Observer {
 
     private IHra hra;
-    /**
-     * východy jsou Set, věci HashMap, stejné u inventáře, proto raději Map místo Collection
-     */
-    private Map<String, Vec> mapVeciProstor;
+    private Map<String, Vec> veciProstoru;
     private Button tlacitkoVeci;
     private Label vecLabel;
     private TextArea centralText;
     /**
-     * Konstruktor panelu věcí v prostoru
+     * kontruktor
      * @param hra -
-     * @param text -
+     * @param text - vypisuje text v centru adventury
      */
     public VeciProstor(IHra hra, TextArea text) {
         this.hra = hra;
@@ -47,15 +44,14 @@ public class VeciProstor extends VBox implements Observer {
 
         getVecLabel().setFont(Font.font("Arial", FontWeight.BOLD, 18));
         getVecLabel().setPrefWidth(200);
-        mapVeciProstor = hra.getHerniPlan().getAktualniProstor().getVeci();
+        veciProstoru = hra.getHerniPlan().getAktualniProstor().getVeci();
         /**
-         * pro každou věc v prostoru se pomocí forEach vygeneruje obrázek
-         * pomocná proměnná "pomocna" pro konkrétní objekt v iteraci
+         * tlacitka pridavajici itemy do inventare
          */
         this.getChildren().clear();
 
-        for (String vec : mapVeciProstor.keySet()) {
-            Vec item = mapVeciProstor.get(vec);
+        for (String vec : veciProstoru.keySet()) {
+            Vec item = veciProstoru.get(vec);
             tlacitkoVeci = new Button(item.getNazev());
             tlacitkoVeci.setMinSize(100,50);
             tlacitkoVeci.setPadding(new Insets(5, 5, 5, 5));
@@ -81,18 +77,12 @@ public class VeciProstor extends VBox implements Observer {
     @Override
     public void update() {
         this.getChildren().clear();
-        mapVeciProstor = hra.getHerniPlan().getAktualniProstor().getVeci();
-        /**
-         * forEach jako u ostatních objektů
-         */
-        for (String vec : mapVeciProstor.keySet()) {
-            /**
-             * try-catch pro zablokování milovaného NullPointerException
-             * pokud nejsou v prostoru žádné věci
-             */
+        veciProstoru = hra.getHerniPlan().getAktualniProstor().getVeci();
+
+        for (String vec : veciProstoru.keySet()) {
             try {
-                Vec pomocna = mapVeciProstor.get(vec);
-                tlacitkoVeci = new Button(pomocna.getNazev());
+                Vec item = veciProstoru.get(vec);
+                tlacitkoVeci = new Button(item.getNazev());
                 tlacitkoVeci.setMinSize(100,50);
                 tlacitkoVeci.setStyle("-fx-font: 18 arial;");
 
@@ -104,7 +94,7 @@ public class VeciProstor extends VBox implements Observer {
                          * Pozor na záměnu pomocna.getNazev() a tlacitkoVeci.getText()!!
                          * EventHandler pak sebere špatný item
                          */
-                        String vstupniPrikaz = "vezmi " + pomocna.getNazev();
+                        String vstupniPrikaz = "vezmi " + item.getNazev();
                         String odpovedHry = hra.zpracujPrikaz(vstupniPrikaz);
                         /**
                          * přidání odpovědí hry do centralTextu, jako u Inventáře
