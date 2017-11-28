@@ -110,7 +110,7 @@ public class HerniPlan implements Subject{
         Vec stul = new Vec("stul", "Stůl nakterém je medovník.", false);
         Vec prsten = new Vec("prsten_moci", "Z člověka udělá poloboha", true);
         Vec zub_03 = new Vec("zub_kerbera", "Zub pekelného psa Kerbera.", true);
-        Vec zub_01 = new Vec("zub_hydry", "Zub vytržený z těla Hydry", true);
+        Vec zub_04 = new Vec("zub_hydry", "Zub vytržený z těla Hydry", true);
         Vec zub_02 = new Vec("zub_chimery", "Zub vytržený z těla Chiméry", true);
         Vec vstupenka = new Vec("palubni_listek", "Permanentka", true);
         Vec vec01 = new Vec("vec01", "", false);
@@ -118,16 +118,10 @@ public class HerniPlan implements Subject{
         Vec win = new Vec("win", "", true);
 
 
-        rokle_kragu.setZamcena(true);
-        rokle_kragu.setKlic(stit);
-        podsveti.setZamcena(true);
-        podsveti.setKlic(zub_02);
-        reka_styx.setZamcena(true);
-        reka_styx.setKlic(zub_03);
-        cesta_smrti.setZamcena(true);
-        cesta_smrti.setKlic(vstupenka);
+
 
         // umístíme věci do prostorů
+        taverna.vlozVec(mec);
         taverna.vlozVec(zlata_mince);
         taverna.vlozVec(medovnik);
         taverna.vlozVec(obolos);
@@ -166,26 +160,23 @@ public class HerniPlan implements Subject{
         sal_zatracenych.setPostava(new Postava("hades","Vzkutku troufalé, aby živý přišel mezi mrtvé. Mladická nerozvážnost...\n"
                 +"TY: Přišel jsem pro svého bratra! Je zde uvězněn místo mě neprávem. \n"
                 +"\n"
-                +"HÁDÉS: Hm, dobrá tedy. Pustím tvého bratra, pokud pro mě splníš úkol. V mém chrámu se usadila Hydra. \n" +
-                "Jak víš, hydra je monstrum nesmrtelné, usekneš hlavu a narostou jí dvě další. Zab ji pro mě a tvůj \n" +
-                "bratr může jít.\n\n Avšak jako běžný smrtelník nemáš šanci jí porazit. Vem si prsten, který dávám svým \n" +
-                "šampionům. Dodá ti sílu, se kterou se rodí jen bůh. Jako důkaz mi z Hydry dones zub.\n"
-                +"A teď se dej se do práce!\n","Dones mi zub hydry jako důkaz a tvůj bratr může jít.", "Tak ses vrátil, máš pro mě zub jako důkaz?",
+                +"HÁDÉS: V podsvětí je každý mrtvý právem, ovšem živí sem nepatří. Vrať se odkud si přišel\nnebo tu zůstaneš navěky.","Dones mi zub hydry jako důkaz a tvůj bratr může jít.", "Tak ses vrátil, máš pro mě zub jako důkaz?",
                 "Ha, zub z mrtvé hydry. Jak jsem slíbil, tvůj bratr se vrátí mezi živé. Ty máš za sebou dlouhou cestu,\n" +
                         "posaď se, pojez a pověz mi, jak si bojoval s tou mrchou.\n"
                         +"Hoduješ a vyprávíš...\n"
                         +"Hádés: Dobrý souboj, jsem rád, že budu mít za společnost takového válečníka. Pohostil ses u mě v \n" +
                         "podsvětí, to znamená, že tu musíš zůstat. Prsten si nech, zde v podsvětí nemá na tebe žádný vliv. \n" +
-                        "Bude ti připomínat, kdo je tu opravdový král.\n", zub_01, win));
+                        "Bude ti připomínat, kdo je tu opravdový král.", zub_04, win));
+
         sal_zatracenych.setPostava(new Postava("persefona"," " +
                 "Unesl mě a uvěznil, můj mocichtivý manžel.... Mezi mrtvými teď musím celý život být. Za  \n" +
                 "domácího mazlíčka tříhlavého psa mám, který v noci leze do postele nám, protože nerad spí sám. \n" +
                 "\n"+
-                "Zabij mého manžela, zabij ho pro mě. Dělej jak říká, využij sílu prstenu k usmrcení hydry. Vytrhni jí zub. Vím\n" +
+                "Zabij mého manžela, zabij ho pro mě. Vím\n" +
                 "čí zuby již nosíš v batohu. Avšak nevíš, že Chiméra, Kerberos a Hydra jsou sourozenci. Děti stohlavého\n" +
-                "obra Týfóna a Echidny, napůl ženy, napůl hada. Zuby z těchto monster udělají z jejich nositele boha. \n" +
-                "Využij tuto sílu k naplnění svého osudu.\n"
-                                                         ,"Chci smrt mého manžela, nic jinného si nepřeji.", "", "",vec01,vec02));
+                "obra Týfóna a Echidny, napůl ženy, napůl hada. \n\nVezmi tento vzácný prsten moci, propůjčí ti sílu zabít \n" +
+                "nesmrtelnou hydru.Zuby z těchto monster udělají z jejich nositele boha. Poté můžeš zdolat\n " +
+                "i samotného vládce podsvětí. Využij tuto sílu k naplnění svého osudu.\n" ,"Chci smrt mého manžela, nic jinného si nepřeji.", "", "",vec01,vec02));
         chram_mrtvych.setPostava(new Postava("hydra","Neumí mluvit...",nicnechce, "","",vec01,vec02));
 
         aktualniProstor = taverna;  // hra začíná v taverně

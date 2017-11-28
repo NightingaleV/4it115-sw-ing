@@ -44,6 +44,7 @@ public class VeciProstor extends VBox implements Observer {
 
     private void init() {
         vecLabel = new Label("Věci v prostoru:");
+
         getVecLabel().setFont(Font.font("Arial", FontWeight.BOLD, 18));
         getVecLabel().setPrefWidth(200);
         mapVeciProstor = hra.getHerniPlan().getAktualniProstor().getVeci();
@@ -111,7 +112,7 @@ public class VeciProstor extends VBox implements Observer {
                         centralText.appendText("\n" + vstupniPrikaz + "\n");
                         centralText.appendText("\n" + odpovedHry + "\n");
 
-                        hra.getHerniPlan().notifyAllObservers();;
+                        hra.getHerniPlan().notifyAllObservers();
 
                     }
                 });

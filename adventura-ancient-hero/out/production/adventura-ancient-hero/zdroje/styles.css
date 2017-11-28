@@ -1,0 +1,12 @@
+#border_pane{
+    -fx-background-image: url("background.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 1600 900;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0); 
+}
+.label {
+    -fx-padding: 10px;
+	-fx-color:white;
+	-fx-base: rgb(0,0,0);
+}

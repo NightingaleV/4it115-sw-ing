@@ -71,6 +71,7 @@ public class Main extends Application {
         vychody = new Vychody(hra);
 
         BorderPane borderPane = new BorderPane();
+        borderPane.setId("border_pane");
         borderPane.setPadding(new Insets(0, 0, 0, 20));
 
         // Text s prubehem hry
@@ -102,6 +103,10 @@ public class Main extends Application {
 
                 if (hra.konecHry()) {
                     zadejPrikazTextArea.setEditable(false);
+                    panelPostav.setDisable(true);
+                    obsahBatohu.setDisable(true);
+                    veciProstor.setDisable(true);
+                    vychody.setDisable(true);
                     centralText.appendText(hra.vratEpilog());
                 }
             }
@@ -121,7 +126,7 @@ public class Main extends Application {
         vychody.getVychodLabel().setPadding(new Insets(20, 10, 10, 10));
         veciProstor.getVecLabel().setPadding(new Insets(20, 10, 10, 10));
         veciProstor.setSpacing(10);
-        vychody.setStyle("-fx-font: 18 arial;");
+
 
         // klikaci vychody
         vychody.setOnMouseClicked(new EventHandler<MouseEvent>() {
@@ -154,12 +159,16 @@ public class Main extends Application {
         borderPane.setTop(menu);
         borderPane.setBottom(dolniLista);
         Scene scene = new Scene(borderPane, 1600, 860);
+        scene.getStylesheets().add("zdroje/styles.css");
         primaryStage.setTitle("Adventura Ancient Hero V2.0");
 
         primaryStage.setScene(scene);
         primaryStage.show();
         zadejPrikazTextArea.requestFocus();
 
+        vychody.setStyle("-fx-font: 18 arial;");
+        vychody.getVychodLabel().getStyleClass().clear();
+        vychody.getVychodLabel().getStyleClass().add("label");
     }
 
 

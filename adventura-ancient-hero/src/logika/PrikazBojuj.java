@@ -40,7 +40,7 @@ public class PrikazBojuj implements IPrikaz
         String jmenoPostavy = parametry[0];
         Postava postava = aktualniProstor.vyberPostava(jmenoPostavy);
         Vec stit = new Vec("stit", "Štít, kterým by měl být vybavený každý hoplita.", true);
-        Vec zub_01 = new Vec("zub_hydry", "Zub vytržený z těla Hydry", true);
+        Vec zub_04 = new Vec("zub_hydry", "Zub vytržený z těla Hydry", true);
         Vec zub_02 = new Vec("zub_chimery", "Zub vytržený z těla Chiméry", true);
         Vec win = new Vec("win", "", true);
 
@@ -71,9 +71,9 @@ public class PrikazBojuj implements IPrikaz
                     +"ustupovat. S respektem v očích se krok po kroku vzdalovalo až zaběhlo zpět do jeskyně. Z ještě se\n"
                     +"mrskajícího dračího ocasu vytrháváš zub pro štěstí. NAPOVEDA: vem zub_chimery\n";
         }
-        else if(postava.getJmeno().equals("hydra") && plan.getBatoh().obsahujeVec("prsten_moci"))
+        else if(postava.getJmeno().equals("hydra"))
         {
-            plan.getAktualniProstor().vlozVec(zub_01);
+            plan.getAktualniProstor().vlozVec(zub_04);
             plan.getAktualniProstor().removePostava("hydra");
             plan.notifyAllObservers();
             return "BOJ: Hlavou ti běží pochybné myšlenky. Máš zabít nesmrtelné. Přemýšlíš, jestli celá tahle výprava byl \n"

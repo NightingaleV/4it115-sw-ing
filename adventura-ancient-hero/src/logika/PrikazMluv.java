@@ -35,6 +35,7 @@ public class PrikazMluv implements IPrikaz
 
         if (postava==null){
             return "Tato postava v této místnosti není.";}
+
         else {    
             return postava.toString();
         }

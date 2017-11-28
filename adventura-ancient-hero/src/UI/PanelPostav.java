@@ -67,7 +67,7 @@ public class PanelPostav extends AnchorPane implements Observer {
         int poziceX = 0;
         int poziceY = 0;
         for (String u : hra.getHerniPlan().getAktualniProstor().getPostavy()) {
-            ImageView obrazkyPostav = new ImageView(new Image(Main.class.getResourceAsStream("/zdroje/postavy/" + u + ".jpg"), 200, 200, true, false));
+            ImageView obrazkyPostav = new ImageView(new Image(Main.class.getResourceAsStream("/zdroje/postavy/" + u + ".jpg"), 300, 300, true, false));
 
             this.getChildren().add(obrazkyPostav);
             if (poziceX == 600) {
@@ -76,7 +76,7 @@ public class PanelPostav extends AnchorPane implements Observer {
             }
             obrazkyPostav.setLayoutX(poziceX);
             obrazkyPostav.setLayoutY(poziceY);
-            poziceX += 200;
+            poziceX += 300;
             obrazkyPostav.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {
