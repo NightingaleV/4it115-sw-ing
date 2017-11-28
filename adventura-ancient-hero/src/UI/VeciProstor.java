@@ -55,8 +55,8 @@ public class VeciProstor extends VBox implements Observer {
         this.getChildren().clear();
 
         for (String vec : mapVeciProstor.keySet()) {
-            Vec pomocna = mapVeciProstor.get(vec);
-            tlacitkoVeci = new Button(pomocna.getNazev());
+            Vec item = mapVeciProstor.get(vec);
+            tlacitkoVeci = new Button(item.getNazev());
             tlacitkoVeci.setMinSize(100,50);
             tlacitkoVeci.setPadding(new Insets(5, 5, 5, 5));
             tlacitkoVeci.setStyle("-fx-font: 18 arial;");
@@ -66,7 +66,7 @@ public class VeciProstor extends VBox implements Observer {
             tlacitkoVeci.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent click) {
-                    String vstupniPrikaz = "vezmi " + pomocna.getNazev();
+                    String vstupniPrikaz = "vezmi " + item.getNazev();
                     String odpovedHry = hra.zpracujPrikaz(vstupniPrikaz);
 
                     centralText.appendText("\n" + vstupniPrikaz + "\n");

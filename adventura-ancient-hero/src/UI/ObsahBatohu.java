@@ -50,20 +50,20 @@ public class ObsahBatohu extends AnchorPane implements Observer {
         this.getChildren().clear();
         inventarLabel = new Label("Inventář:");
         getInventarLabel().setFont(Font.font("Arial", FontWeight.BOLD, 18));
-        getInventarLabel().setPrefWidth(600);
+        getInventarLabel().setPrefWidth(200);
         int poziceX = 0;
         int poziceY = 0;
         for (String batoh : hra.getBatoh().getObsahBatohu()) {
-            ImageView obrazkyPredmetu = new ImageView(new Image(Main.class.getResourceAsStream("/zdroje/inventar/" + batoh + ".jpg"), 100, 100, false, false));
+            ImageView obrazkyPredmetu = new ImageView(new Image(Main.class.getResourceAsStream("/zdroje/inventar/" + batoh + ".jpg"), 65, 65, false, false));
             this.getChildren().add(obrazkyPredmetu);
 
-            if (poziceX == 500) {
-                poziceY = 100;
-                poziceX = 0;
+            if (poziceY == 325) {
+                poziceY = 0;
+                poziceX = 65;
             }
             obrazkyPredmetu.setLayoutX(poziceX);
             obrazkyPredmetu.setLayoutY(poziceY);
-            poziceX += 100;
+            poziceY += 65;
             obrazkyPredmetu.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {

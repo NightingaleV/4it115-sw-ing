@@ -98,6 +98,8 @@ public class HerniPlan implements Subject{
         sal_zatracenych.setVychod(cesta_smrti);
 
 
+
+
         // vytvoříme několik věcí
         Vec pivo = new Vec("pivo", "Pivo s pořádnou pěnou, ale žádnej podmírák.", true);
         Vec medovnik = new Vec ("medovnik","Medový koláč", true);
@@ -118,10 +120,18 @@ public class HerniPlan implements Subject{
         Vec win = new Vec("win", "", true);
 
 
+        rokle_kragu.setZamcena(true);
+        rokle_kragu.setKlic(stit);
+        podsveti.setZamcena(true);
+        podsveti.setKlic(zub_02);
+        reka_styx.setZamcena(true);
+        reka_styx.setKlic(zub_03);
+        cesta_smrti.setZamcena(true);
+        cesta_smrti.setKlic(vstupenka);
 
 
         // umístíme věci do prostorů
-        taverna.vlozVec(mec);
+
         taverna.vlozVec(zlata_mince);
         taverna.vlozVec(medovnik);
         taverna.vlozVec(obolos);

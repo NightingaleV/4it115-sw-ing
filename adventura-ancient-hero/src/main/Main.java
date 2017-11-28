@@ -120,8 +120,10 @@ public class Main extends Application {
         FlowPane levyPanel = new FlowPane();
         levyPanel.setAlignment(Pos.TOP_LEFT);
         levyPanel.setMaxWidth(200);
+        levyPanel.setMaxHeight(860);
         levyPanel.getChildren().addAll(vychody.getVychodLabel(), vychody);
         levyPanel.getChildren().addAll(veciProstor.getVecLabel(),veciProstor);
+        levyPanel.getChildren().addAll(obsahBatohu.getInventarLabel(),obsahBatohu);
         borderPane.setLeft(levyPanel);
         vychody.getVychodLabel().setPadding(new Insets(20, 10, 10, 10));
         veciProstor.getVecLabel().setPadding(new Insets(20, 10, 10, 10));
@@ -144,7 +146,7 @@ public class Main extends Application {
         pravyPanel.setAlignment(Pos.TOP_RIGHT);
         pravyPanel.getChildren().add(mapa);
         pravyPanel.getChildren().addAll(panelPostav.getPostavyLabel(),panelPostav);
-        pravyPanel.getChildren().addAll(obsahBatohu.getInventarLabel(),obsahBatohu);
+
         panelPostav.getPostavyLabel().setPadding(new Insets(20, 10, 10, 20));
         obsahBatohu.getInventarLabel().setPadding(new Insets(20, 10, 10, 20));
         borderPane.setRight(pravyPanel);
